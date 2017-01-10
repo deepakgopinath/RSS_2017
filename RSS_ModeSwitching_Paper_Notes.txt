@@ -1,0 +1,103 @@
+Experimental design notes:
+
+Heilmer's Catechism:
+
+What are you trying to do? Articulate your objectives using absolutely no jargon.
+
+A. To develop a mode switch assistance system, that will reduce the effort (as measured in terms of the number of mode switches) in task completion. With the experiment we intend to see how useful the mode switch assistance is when the control interfaces and the tasks are varied. 
+
+
+How is it done today, and what are the limits of current practice?
+
+A few different mode switch assistance paradigms have been proposed in the context of assistive robotics, time optimal automatic mode switching from CMU etc. The limitations of such approach include, assumptions that time optimality is what needs to be optimized for. Presumptions regarding the cost function that the user is trying to optimize. 
+
+What's new in your approach and why do you think it will be successful?
+
+The current system tries to circumvent that by making it a user triggered assistance system, therefore is not intrusive. It further enhances the synergy in the human robot interaction. This system will be more useful for more limited control interfaces such as sip n' puffs and head array in which the mode switching has a circular nature and prohibits the user from switching between any two modes freely. 
+
+Who cares? If you're successful, what difference will it make? What are the risks and the payoffs?
+
+NA
+
+How much will it cost? How long will it take? What are the midterm and final "exams" to check for success?
+NA
+
+
+
+hypothesis
+
+O1 - The assistance paradigm if initiated by the user will result in a reduction of the number of mode switches compared to the scenario where the assistance is not available. 
+
+O2 - The reduction will be greater for interfaces that are more limited
+
+O3 - People will prefer to have the assistance when using more limited interfaces. 
+
+Variables
+
+IVs 
+	a: interface - joy3, joy2, headarray?  or joy2 joy1 headarray or joy2 and headarray - 2 or 3
+	b: tasks - same plane diff orientation, diff plane diff orientation - two levels - 2
+	c: paradigms - pure teleop? (baseline training), no assistance, assistance at the outset, assistance upon request (exploratory paradigm to investigate how people might generate request patterns) - 3 or 4?
+
+	confounds?nuisance?extraneous?
+
+	Home position for robot:
+	Starting mode: - always the same. Creates the same bias? Is it better to keep it that way?
+	Ordering/Learning: - Counterbalancing in the way the trials are presented between subjects?
+	Variable skill level - LEarning phase to normalize the differences. 
+	Gender/Age/Familiarity with technology/Height difference (which will affect the perspective and the vantage point from where the subjects are sitting while operating the robot):
+	Injury Level: Ability to operate an interface. 
+
+
+Things to do
+
+Jan 2 - Work on IRB protocol till its done - Almost. Consent form left. that is ok. Will be submitted this week.
+
+
+Jan 3- Design the experiment. Write out the IVs, nuisance variables and dependent varibales. Think of the statistical testing that will be used to analyse the results. Most likely some kind of factorial ANOVA or something, because we are interested in studying the differences between group means, where the type of interface are the different groups and the variable of interests are task completion, number of mode switches. etc. 
+
+Jan 3 - Try out the different components of the algorithm. Spread, Absolute values, Conf gradient in both directions. Prepare all the necessary ingredients to compute all these quantities. Almost everything is available. Might have to add a few more columns to the conf_chunk matrix before it is returned so thatat the caller end, the different elements can be combined to produce the different components that will affect the confidence disambiguation metric. Fix this tonight and try to test it with simulations. 
+
+
+
+
+For RSS maybe focus on exploratory data analysis to get a sense of what is going on before a more formal experiment is proposed. 
+what needs to be done when EDA is designed is to be thought about. 
+
+
+
+Jan 4 - Finish IRB and consent form - Later. 
+		Finish tweaking the algorithm - if possible
+			Look at the plots and see what makes sense to pull out of the plots. Do the same thing at a random position and collect all dimensions plus and minus.
+		Start designing the expeirment thoroughly. Start looking at the permutations and create script to generate a uniformly distributed set of home positoins and starting modes. 
+
+		Read one paper - Neuro Science - Make notes - Note bad. Read one more time at night. 
+		Start writing 
+			Collect more related work. Look at CPS protocol for related works on how expensive mode switching is. Weave the story in such a way that it focuses on how in this system we are trying to exploit synergies in human robot interaction. Since it is a shared responsibility, the "assistance" need not be one way. The robot and the user can "nudge" each other and "excite" each other in an attempt to collaboratively accomplish the task. Bring this aspect out. Look at literature in behaviorial psych, synergies in HRI etc. 
+
+
+Experimental:
+
+How will it happen. 
+
+Subject will get time to teleoperate arm on a third training task different from the test tasks and the primary goal is to get familiar with the interface(s) and the manipulator control. Training using both interfaces. No mode switch assistance. Just teleoperation. 
+
+Then the study begins officially. 
+
+For tasks - odd numbered subjects get assigned T1 as task 1 whereas even number gets assigned T2 as the task 1. This will eliminate ordering effects at the task level. 
+
+SUppose this is a odd subject. 
+
+	T1 is setup to go. T1 has three possible goals. We will require the subject to go all three goals in a randomized fashion. In such a way that each goal will be reached using both interfaces  
+
+
+Work on the metric:
+
+Isolate each one of them. See the effect of each. Play around with look ahead. See if second derivatives are important. 
+Maybe give a shot at time recording node? How to collect data from the node into csv. Does it saved when the node quits? The node is run every single time?
+
+
+Exp design papers:
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2796056/
+

@@ -1,0 +1,126 @@
+Working Title:
+
+Mode Switching Assistance Enabling Maximal Goal Disambiguation for Assistive Robotic Manipulators. 
+
+ABSTRACT:
+
+INTRODUCTION:
+
+Main points to bring across:
+
+Why assistive robotics. Standard first paragraph in a way: Refer to old papers, protocols, grants, IRBs for language
+
+Different types of control interfaces? Tablets etc. (more like indicators of goals), this depends a lot on autonomy which can result in poor user satistifaction and accpetance. The other type are interfaces which directly control the motion along all possible dimension. For a wheelchair, it can be the heading and velocity. For a assistive robotic arm, it can be a 6d? Various devices exist. However, can't do all 6 at once. Thefore the control space is partitioned into modes. modal control. 
+
+Issues with it. 
+Why do modes exists? Control interfaces cannot control all dimensions at the same time. Therefore the control space is partitioned into subsets and a mode control each subset. The union of all modes span the entire control space. Examples of modes for different control interface. The more limited the control interface is, typically more the number of modes there are. More modes imples, less the number of control dimensions that ar simultanesouly cxontrolled. 
+
+Why is mode swicthing not good? Establish why mode switching is not great: Refer to IRB, IRB references which talk about mode switching expense, Herlant's paper for motivation. The essence is that with more number of mode switches task performance is affected and increase cognitive and physical load for the user. Mention the concept of task switching (refer laura's paper). Therefore there is a need for assistance paradigms that help in reducing mode switches in the hope that it will alleviate cognitive and physical burden on the user. 
+
+
+Shared control can be of two types: Heirarchical or Blending based paradigms. Our proposed mode switch system belongs to the heirarchical category because the system picks the mode and the human operates the robot in that mode. In our case, this assistance system augments a blending based paradigm in which the final robot velocity is a blended sum of human issued velocity and an autonomous robot policy. It is usually the case that the assisatnce offered by the robot, especially in a blending based paradigm (in which there is a very direct impact on performance as a result of blending), is regulated by the robot's ability to determine user intent accurately. For example, in a simple reaching task, the intent that the system is trying to uncover would be the goal that the user is going after. 
+At every instant in order to provide the appropriate kind of assistance (picking the right goal and blending the user command with autonomous robot policy for the picked goal using an appropriate amount of blending) the robot attempts to infer the human's intent and it is very unlikely that the robot can do this with 100% accuracy. Therefore a confidence metric is introduced which will indicate how confident the system is in its estimate of human intent. This confidence function can be designed in however way the system designer wants. The blending factor is in turn a function of the confidence. 
+
+Important themes to explore: Legibility of motion (Increase this, helps in quicker and more confident goal inference)
+Mutual help: synergies. 
+
+Elaborate on what synergy is in human robot interaction in the domain of assistive robotics. Clarify that the succesful and more seamless task execution might be possible if in addition to the robot helping the human, the human also "helps" the robot. 
+Here may be introduce the idea that instead of just having the robot try to the help the human, the human can also help the robot to make its job easier (thereby enabling it to help the human in return in a more effective way)
+
+However, it can be the case that certain actions by the human (the only way to issue actions are through the control interface) or equivalently certain control commands issued by the humans might carry more information and better expresses the human intent which can then help the robot to draw useful and correct inferences about intent more easily. That is certain human actions are more legible than others. 
+
+Can possibly tie this with the idea of legibility and intent expressive motions? But in a flipped manner. 
+
+What we are striving for is more legible indicators from the human which will then enable the system to quickly and confidently INFER the correct goal. And in this work we try to do this by restricting the motion of the user in certain modes. 
+
+Important paper: Anca's legibility and predictability.  
+
+ The control commands that the human can generate is limited by the control mode in which he/she is currently operating. 
+This can be illustrated by a dummy example. Consider the setup in Figure 1 in which we have two point goals with the same y location and different x location. And assume that the robotic manipulators end effector is right in the middle. For this 2d dimensional dummy example the two control dimensions along which the end effector can be moved are x and y. It is clear that if the user decides to move along y direction, it is euqally possibly that the user is going for Goal A or Goal B and therefore the system will have no way to disambiuguate and distinguish between the two goals. That is the motion is not legible enough to draw accurate and useful inferences. However if the motion was performed along the x direction then system will be able to immediately conclude whether the user was going for A or B based on which direction the user moved. This is assuming that the confidence formulation looks the human control command and its alignment with the vector joining current position and the goals and probably also distance. 
+If the system somehow ensures that the control mode in which the user operates is one which allows the user to provide control commands that will be of more "help" to the system in disambiguating between the various possible goals and draw more accurate inference, then the system will be able to provide appropriate and correct assistance more often than not. The goal is for the system to somehow to elicit the right kind of "signals" from the human so that it can disambiguate and put itself in a better position to help the human out. This exploits underlying synergies in human robot interaction. It is true that, in some cases such a mode might not be the most ideal mode FOR the human to operate inm due to personal idiosyncracies or habits and preferneces. However, if the human  agrees to compromise a little bit and decides to provide "hints" and "nudges" the robot in the right direction, the overallperformance gain will eventually outweigh the slight suboptimality due to being in the what the human might consider to be the "wrong" mode. 
+
+Based on these ideas, in this work we have developed a mode switching assistance algorithm which returns, upon user request, a control mode that allows the robot to maximally disambiguate between the confidences of the various goals in the scene and thereby elicits more legible human actions. Once the mode is selected FOR the user, any subsequent control command issued by the user in that control mode will help the robot to infer the human intent more accuractely and unequivocally, thereby providing better assistance. Section 2 discusses various related work. Section 3 describes the mathematical details of the algorithms. Section 4 presents and results followed by discussion. 
+
+RELATED WORKS:
+
+
+Protocol related: Mode swicthing is expensive. Why? Details? 
+
+Difficulties in manipulator control and evaluation of interfaces in terms of user effort? IRB protocol, Lauras thesis proposal might have some resources. 
+Current mode swicth assistance systems. Time optimal. Drawbacks. Assumption that time optimality is the main factor? Objective function is typically complicated and simple forms need not cpature the whole picture and will result in suboptimal choices. Furthermore evlauation is done in a simulated world. Whereas he we do it on a real manipulator robot. More number of modes. 
+Synergies in HRI - instances when human helps robot, robot helps human and collaborative task execution - Look at collected related works. Should be able to weave a story out of it and somehow fit what I am doing into that web. 
+
+Legibility and predictability work. Directness in conveying intent. Helps in quickly and confidentl inferring the goal. 
+Goal is to put the robot into a mode so that subsequent motion generated by the human in that mode will be more legible. Which means the system will then be able to quickly and confidently infer the correct goal. Quickly is out of our hands. But being more confident can be translated to having better disambiguation between different goals. This is the focus of this system. 
+
+
+
+
+ALGORITHM:
+
+ESTABLISH THAT BY DOING MAXIMAL CONFIDENCE DISAMBIGUATION THE GOAL IS TO ELICIT MORE LEGIBLE BEHAVIOR FROM THE USER. THEN THE REST OF THE PAPER I CAN TALK ABOUT INCREASING CONFIDENCE DISAMBIGUATION AND INCREASING LEGIBILITY INTERCHANGEABLY. 
+TO be finalized on the weekend. 
+Refer to notebook. 
+Formalize control dimensions, control modes. Confidences. Gradients. Absolute values. Why close form solutions can become rela messy. Therefore sampling from the function by forward (and backward projection). Identify the different components that will "inform" the final disambiguation metric. 
+Formalize the form of confidence function used. Argue and justify why this is meaningul. Intent is mostly manifested in motion. (maybe some psychology related work?) Legibility and predictability work. Directness in conveying intent. Helps in quickly and confidentl inferring the goal. 
+	CONFIDENCE FORMULATION
+
+	AUTONOMOUS ROBOT POLICY GENERATION: HOW U_R WILL AFFECT THE ACTUAL CONFIDENCE VALUES. 
+
+	DISAMBIGUATION METRIC: (The meat of the algorithm)
+
+		Component A:
+			Which strives for immediate gain upon moving from the current location. Looks at the spread of the confidences, if the the robot were to be moved either the positive direction or the negative direction along a particular control dimension. The user velocity at each of the projected locations is assumed to be the one which will TAKE the robot from the current position to that project location. 
+
+
+		Component B:
+			How different are individual confidence gradients in both directions? This encode the propensity for change in confidences. If all confidences change at the same rate, there is no gain in information. If confidences change rapidly for some and not for others, it is an indication of reinforcing behavior? maybe? that the user's motion is directed strongly towards or away from a  goal?. Indication that the user motion is more legible. For a 2 goal scenario this is enough as this will help us distinguish between the 2 goals. For more than 2 goals, it will be a one against all scenario. If it happens that the user decides to perform the motion which reinforces the legible behavior then we can conclude that the correct goal is the one which has the maximum confidence. If not the motion is still legible. The confidences typically are smooth functions of position (indirectly via the robot policy etc. Maybe show picture?
+
+		Component C:
+			The difference between the top two? It is possible that the spred between the confidence is concentrated in the bottom half. What we strive for is a good distribution between the confidences in addition to just the total spread. ? THis needs to dealt with
+			np.var(scipy.spatial.distance.pdist())
+
+		All these together can be combined to define a disambiguation metric for a control dimension
+		Dismabigutaion metric for a control mode is then simpley defined as the sum of the disam metric for all the control dimensions that constitute the control mode. The argmax is chosen the "best" mode. 
+
+	OTHER FEATURES:
+		Talk about multistep look ahead. projecting further into the future. Eligibility trace kind of thing. Discounted gains. 
+
+Finalize metric: a combination of all these factors. 
+
+Address the fact that the actual control command in a mode that a user might issue may have components along ALL dimensions. In which case the actual change in the ith confidence will be Grad.r_cap. Since r_cap is determined by the user the way to maximise this will be to maximise the first vector. GRadient is indded the vector which maximizes this. SO looking at gradients (along the control dimensions) is sufficient to charcaterise a control mode's ability to disambiguate:
+
+What simulation results do we need?
+
+A single dismabiguation computation can only compare two possible goals. If there are more than 2 goal locations in the scene for completeion disambiguation multiple computation at different stages of task execution is probably needed. This is demonstrated in a simulated examples. Start at one goal, request. Then move....at another spot request which allows for layterla motion proabbly. etc....lah blah...
+
+Different types of confidence metrics? Will this give an idea of which is a better confidence metric? Immediate look ahead. 
+
+Algo returns a mode. Now have randomized velocity vectors in that mode. Show that in most of the cases the the disamb metric follows the same trend. Showing that the it is only enough to look at the principal axis of the control mode to characterize the dismabiguation ability of a mode. 
+
+
+
+
+Experimental Methods
+
+To be finalized on monday. 
+
+Describe platform.
+Describe Interfaces
+Describe Paradigms -Wit and without
+Describe Tasks - Bring out the profgressive difficulty in terms of added rquirement on grasp orientation. 
+
+Describe the study design and what each trial looks like - To be finalized on monday
+Describe the questions that we are trying to seek answers for? Hypothesis driven or exploratory or both.
+
+
+Metrics: Objective and Subjective
+
+Results
+
+Discussion
+
+References
+Keep adding as it gets mentioned. 
+
+

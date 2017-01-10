@@ -1,0 +1,73 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Dragan and Srinivasa(2013)]{dragan2013generating}
+Anca Dragan and Siddhartha Srinivasa.
+\newblock Generating legible motion.
+\newblock 2013.
+
+\bibitem[Dragan et~al.(2013)Dragan, Lee, and Srinivasa]{dragan2013legibility}
+Anca~D Dragan, Kenton~CT Lee, and Siddhartha~S Srinivasa.
+\newblock Legibility and predictability of robot motion.
+\newblock In \emph{2013 8th ACM/IEEE International Conference on Human-Robot
+  Interaction (HRI)}, pages 301--308. IEEE, 2013.
+
+\bibitem[Gopinath et~al.(2017)Gopinath, Jain, and Argall]{gopinath2017human}
+Deepak Gopinath, Siddarth Jain, and Brenna~D Argall.
+\newblock Human-in-the-loop optimization of shared autonomy in assistive
+  robotics.
+\newblock \emph{IEEE Robotics and Automation Letters}, 2\penalty0 (1):\penalty0
+  247--254, 2017.
+
+\bibitem[Herlant et~al.(2016)Herlant, Holladay, and
+  Srinivasa]{herlant2016assistive}
+Laura~V Herlant, Rachel~M Holladay, and Siddhartha~S Srinivasa.
+\newblock Assistive teleoperation of robot arms via automatic time-optimal mode
+  switching.
+\newblock In \emph{The Eleventh ACM/IEEE International Conference on Human
+  Robot Interation}, pages 35--42. IEEE Press, 2016.
+
+\bibitem[Monsell(2003)]{monsell2003task}
+Stephen Monsell.
+\newblock Task switching.
+\newblock \emph{Trends in cognitive sciences}, 7\penalty0 (3):\penalty0
+  134--140, 2003.
+
+\bibitem[Rosenthal et~al.(2010)Rosenthal, Biswas, and
+  Veloso]{rosenthal2010effective}
+Stephanie Rosenthal, Joydeep Biswas, and Manuela Veloso.
+\newblock An effective personal mobile robot agent through symbiotic
+  human-robot interaction.
+\newblock In \emph{Proceedings of the 9th International Conference on
+  Autonomous Agents and Multiagent Systems: volume 1-Volume 1}, pages 915--922.
+  International Foundation for Autonomous Agents and Multiagent Systems, 2010.
+
+\bibitem[Sorokin et~al.(2010)Sorokin, Berenson, Srinivasa, and
+  Hebert]{sorokin2010people}
+Alexander Sorokin, Dmitry Berenson, Siddhartha~S Srinivasa, and Martial Hebert.
+\newblock People helping robots helping people: Crowdsourcing for grasping
+  novel objects.
+\newblock In \emph{Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ
+  International Conference on}, pages 2117--2122. IEEE, 2010.
+
+\bibitem[Tsui et~al.(2008)Tsui, Yanco, Kontak, and
+  Beliveau]{tsui2008development}
+Katherine Tsui, Holly Yanco, David Kontak, and Linda Beliveau.
+\newblock Development and evaluation of a flexible interface for a wheelchair
+  mounted robotic arm.
+\newblock In \emph{Proceedings of the 3rd ACM/IEEE international conference on
+  Human robot interaction}, pages 105--112. ACM, 2008.
+
+\bibitem[Volosyak et~al.(2005)Volosyak, Ivlev, and
+  Graser]{volosyak2005rehabilitation}
+Ivan Volosyak, Oleg Ivlev, and Axel Graser.
+\newblock Rehabilitation robot friend ii-the general concept and current
+  implementation.
+\newblock In \emph{9th International Conference on Rehabilitation Robotics,
+  2005. ICORR 2005.}, pages 540--544. IEEE, 2005.
+
+\end{thebibliography}

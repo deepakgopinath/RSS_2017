@@ -97,6 +97,8 @@ Isolate each one of them. See the effect of each. Play around with look ahead. S
 Maybe give a shot at time recording node? How to collect data from the node into csv. Does it saved when the node quits? The node is run every single time?
 
 
+
+
 Exp design papers:
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2796056/

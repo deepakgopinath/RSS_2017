@@ -3,10 +3,17 @@
 \BOOKMARK [1][-]{section.3}{ALGORITHM DESIGN}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{Notation}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Disambiguation metric}{section.3}% 5
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Spread}{subsection.3.2}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Variance in confidences}{subsection.3.2}% 6
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Mean of confidences}{subsection.3.2}% 7
 \BOOKMARK [3][-]{subsubsection.3.2.3}{Difference between largest confidences}{subsection.3.2}% 8
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Gradients}{subsection.3.2}% 9
-\BOOKMARK [1][-]{section.4}{STUDY DESIGN}{}% 10
-\BOOKMARK [1][-]{section.5}{RESULTS AND DISCUSSION}{}% 11
-\BOOKMARK [1][-]{section.6}{Conclusions}{}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Blending paradigm}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{STUDY METHODS}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Hardware}{section.4}% 12
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Robotic Platform}{subsection.4.1}% 13
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Control Interfaces}{subsection.4.1}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Task Descriptions}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.3}{Assistance Paradigms}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.4}{Study Protocol and Metrics}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{RESULTS AND DISCUSSION}{}% 18
+\BOOKMARK [1][-]{section.6}{CONCLUSIONS}{}% 19

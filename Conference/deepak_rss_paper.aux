@@ -16,60 +16,88 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{choi2008laser}
 \providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A and B indicate two point goal locations. The robot end effector is at location C. It is clear that any motion of the end effector along the y-axis will not help the system to disambiguate between the two goals; that is, the motion is not legible. However, if the human moves the robot along the x-axis, the system will be able to infer the goal immediately based on the direction in which the robot moves. }}{1}{figure.1}}
-\newlabel{DE}{{1}{1}{A and B indicate two point goal locations. The robot end effector is at location C. It is clear that any motion of the end effector along the y-axis will not help the system to disambiguate between the two goals; that is, the motion is not legible. However, if the human moves the robot along the x-axis, the system will be able to infer the goal immediately based on the direction in which the robot moves}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of goal disambiguation along various control dimensions. A and B indicate two point goal locations. The robot end effector is at location C. Any motion of the end effector along the y-axis will not help the system to disambiguate between the two goals; that is, the motion is not legible. However, motion along the x-axis allows the goal to be inferred immediately based on the direction in which the robot moves. }}{1}{figure.1}}
+\newlabel{DE}{{1}{1}{Illustration of goal disambiguation along various control dimensions. A and B indicate two point goal locations. The robot end effector is at location C. Any motion of the end effector along the y-axis will not help the system to disambiguate between the two goals; that is, the motion is not legible. However, motion along the x-axis allows the goal to be inferred immediately based on the direction in which the robot moves}{figure.1}{}}
 \citation{volosyak2005rehabilitation}
-\citation{tsui2008development}
+\citation{tsui2008development,nuttin2002selection}
 \citation{herlant2016assistive}
 \citation{monsell2003task}
 \citation{herlant2016assistive}
 \citation{gopinath2017human}
-\citation{dragan2013legibility,dragan2013generating}
+\citation{dragan2013legibility}
+\citation{holladay2014legible}
+\citation{goodfellow2010help}
 \citation{sorokin2010people}
 \citation{rosenthal2010effective}
 \@writefile{toc}{\contentsline {section}{\numberline {II}RELATED WORKS}{2}{section.2}}
 \newlabel{RW}{{II}{2}{RELATED WORKS}{section.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces In this example, $n_g = 3$. Furthermore, the region accessible due to a positive and negative change in the coordinate from the current position is shaded beige and light blue respectively. Additionally, the figure also shows a discontinuity in the confidences at the current position.}}{3}{figure.2}}
-\newlabel{DM_FIG}{{2}{3}{In this example, $n_g = 3$. Furthermore, the region accessible due to a positive and negative change in the coordinate from the current position is shaded beige and light blue respectively. Additionally, the figure also shows a discontinuity in the confidences at the current position}{figure.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}ALGORITHM DESIGN}{3}{section.3}}
-\newlabel{ALGO}{{III}{3}{ALGORITHM DESIGN}{section.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}ALGORITHM DESIGN}{2}{section.3}}
+\newlabel{ALGO}{{III}{2}{ALGORITHM DESIGN}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Illustration of change in confidence with movement along a single control dimension. The region accessible from position \text  {x} due to positive and negative motion is shaded beige and light blue respectively. Note the discontinuity in the confidences at the current position.}}{3}{figure.2}}
+\newlabel{DM_FIG}{{2}{3}{Illustration of change in confidence with movement along a single control dimension. The region accessible from position \text {x} due to positive and negative motion is shaded beige and light blue respectively. Note the discontinuity in the confidences at the current position}{figure.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Notation}{3}{subsection.3.1}}
 \newlabel{NOT}{{\unhbox \voidb@x \hbox {III-A}}{3}{Notation}{subsection.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Disambiguation metric}{4}{subsection.3.2}}
-\newlabel{DM}{{\unhbox \voidb@x \hbox {III-B}}{4}{Disambiguation metric}{subsection.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}1}Variance in confidences}{4}{subsubsection.3.2.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}2}Mean of confidences}{4}{subsubsection.3.2.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}3}Difference between largest confidences}{4}{subsubsection.3.2.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}4}Gradients}{4}{subsubsection.3.2.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Blending paradigm}{4}{subsection.3.3}}
-\newlabel{BP}{{\unhbox \voidb@x \hbox {III-C}}{4}{Blending paradigm}{subsection.3.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A prototypical arbitration function, parameterized by {\relax \fontsize  {8}{9pt}\selectfont  $\boldsymbol  {\theta } = \{\theta _{1}, \theta _{2}, \theta _{3}\}$}.}}{4}{figure.3}}
-\newlabel{ALPHA}{{3}{4}{A prototypical arbitration function, parameterized by {\footnotesize $\boldsymbol {\theta } = \{\theta _{1}, \theta _{2}, \theta _{3}\}$}}{figure.3}{}}
-\newlabel{E1}{{1}{5}{Blending paradigm}{equation.3.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}STUDY METHODS}{5}{section.4}}
-\newlabel{EXP}{{IV}{5}{STUDY METHODS}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Confidence function}{3}{subsection.3.2}}
+\newlabel{CF}{{\unhbox \voidb@x \hbox {III-B}}{3}{Confidence function}{subsection.3.2}{}}
+\newlabel{EQ1}{{\unhbox \voidb@x \hbox {III-B}}{3}{Confidence function}{subsection.3.2}{}}
+\newlabel{EQ2}{{\unhbox \voidb@x \hbox {III-B}}{3}{Confidence function}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Disambiguation metric}{3}{subsection.3.3}}
+\newlabel{DM}{{\unhbox \voidb@x \hbox {III-C}}{3}{Disambiguation metric}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}1}Separation in confidences}{4}{subsubsection.3.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}2}Max of confidences}{4}{subsubsection.3.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}3}Difference between largest confidences}{4}{subsubsection.3.3.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-C}4}Gradients}{4}{subsubsection.3.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Blending paradigm}{4}{subsection.3.4}}
+\newlabel{BP}{{\unhbox \voidb@x \hbox {III-D}}{4}{Blending paradigm}{subsection.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A prototypical arbitration function.}}{4}{figure.3}}
+\newlabel{ALPHA}{{3}{4}{A prototypical arbitration function}{figure.3}{}}
+\newlabel{E1}{{2}{5}{Blending paradigm}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}EMPIRICAL VALIDATION}{5}{section.4}}
+\newlabel{EV}{{IV}{5}{EMPIRICAL VALIDATION}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Hardware}{5}{subsection.4.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}1}Robotic Platform}{5}{subsubsection.4.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}2}Control Interfaces}{5}{subsubsection.4.1.2}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Operational paradigms for the teleoperation interfaces}}{5}{table.1}}
-\newlabel{CIM}{{I}{5}{Operational paradigms for the teleoperation interfaces}{table.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Task Descriptions}{5}{subsection.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Assistance Paradigms}{5}{subsection.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Study Protocol and Metrics}{5}{subsection.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Assistance Paradigms}{5}{subsection.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}SIMULATION RESULTS}{5}{section.5}}
+\newlabel{SIMRESULTS}{{V}{5}{SIMULATION RESULTS}{section.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Best control dimension distribution for two different confidence functions.}}{5}{table.1}}
+\newlabel{HMD}{{I}{5}{Best control dimension distribution for two different confidence functions}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Pilot study tasks performed by the subjects. \textit  {Left to right:} Simple Reaching (\textit  {Rp}), Reaching with same grasp (\textit  {RsG}), Reaching with different grasp (\textit  {RdS}).}}{6}{figure.4}}
+\newlabel{TASKS}{{4}{6}{Pilot study tasks performed by the subjects. \textit {Left to right:} Simple Reaching (\textit {Rp}), Reaching with same grasp (\textit {RsG}), Reaching with different grasp (\textit {RdS})}{figure.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Accuracy for ???}}{6}{table.2}}
+\newlabel{SIM}{{II}{6}{Accuracy for ???}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}PILOT STUDY}{6}{section.6}}
+\newlabel{EXP}{{VI}{6}{PILOT STUDY}{section.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {VI-}1}Control Interfaces}{6}{subsubsection.6.0.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 2-axis joystick (left) and switch--based head array (right)}}{6}{figure.5}}
+\newlabel{J2_HA}{{5}{6}{2-axis joystick (left) and switch--based head array (right)}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Task Descriptions}{6}{subsection.6.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Operational paradigms for the teleoperation interfaces}}{6}{table.3}}
+\newlabel{CIM}{{III}{6}{Operational paradigms for the teleoperation interfaces}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Pilot Study Protocol and Metrics}{6}{subsection.6.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Top row: Best control dimensions for confidence measure from Equation\nobreakspace  {}\ref  {EQ1}. Bottom row: Best control dimensions for confidence measure from Equation\nobreakspace  {}\ref  {EQ2}. Left column: $\boldsymbol  {k}^*$ is X. Middle Column: $\boldsymbol  {k}^*$ is Y and Right Column: $\boldsymbol  {k}^*$ is Z. Magenta spheres indicate the goal locations.}}{7}{figure.6}}
+\newlabel{HM_SEP}{{6}{7}{Top row: Best control dimensions for confidence measure from Equation~\ref {EQ1}. Bottom row: Best control dimensions for confidence measure from Equation~\ref {EQ2}. Left column: $\boldsymbol {k}^*$ is X. Middle Column: $\boldsymbol {k}^*$ is Y and Right Column: $\boldsymbol {k}^*$ is Z. Magenta spheres indicate the goal locations}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-C}}Pilot Study Results}{7}{subsection.6.3}}
+\newlabel{RES}{{\unhbox \voidb@x \hbox {VI-C}}{7}{Pilot Study Results}{subsection.6.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Top row: Number of Mode switches for joystick (left) and head array (right) for Assisted vs. Manual paradigms. Bottom row: Task Completion Times for joystick (left) and head array (right) for Assisted vs. Manual paradigms.}}{7}{figure.7}}
+\newlabel{DATAPLOT}{{7}{7}{Top row: Number of Mode switches for joystick (left) and head array (right) for Assisted vs. Manual paradigms. Bottom row: Task Completion Times for joystick (left) and head array (right) for Assisted vs. Manual paradigms}{figure.7}{}}
 \bibstyle{plainnat}
 \bibdata{references}
-\bibcite{dragan2013generating}{{1}{2013}{{Dragan and Srinivasa}}{{}}}
+\bibcite{choi2008laser}{{1}{2008}{{Choi et~al.}}{{Choi, Anderson, Glass, and Kemp}}}
 \bibcite{dragan2013legibility}{{2}{2013}{{Dragan et~al.}}{{Dragan, Lee, and Srinivasa}}}
-\bibcite{gopinath2017human}{{3}{2017}{{Gopinath et~al.}}{{Gopinath, Jain, and Argall}}}
-\bibcite{herlant2016assistive}{{4}{2016}{{Herlant et~al.}}{{Herlant, Holladay, and Srinivasa}}}
-\bibcite{monsell2003task}{{5}{2003}{{Monsell}}{{}}}
-\bibcite{rosenthal2010effective}{{6}{2010}{{Rosenthal et~al.}}{{Rosenthal, Biswas, and Veloso}}}
-\bibcite{sorokin2010people}{{7}{2010}{{Sorokin et~al.}}{{Sorokin, Berenson, Srinivasa, and Hebert}}}
-\bibcite{tsui2008development}{{8}{2008}{{Tsui et~al.}}{{Tsui, Yanco, Kontak, and Beliveau}}}
-\bibcite{volosyak2005rehabilitation}{{9}{2005}{{Volosyak et~al.}}{{Volosyak, Ivlev, and Graser}}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}RESULTS AND DISCUSSION}{6}{section.5}}
-\newlabel{RES}{{V}{6}{RESULTS AND DISCUSSION}{section.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}CONCLUSIONS}{6}{section.6}}
-\newlabel{CON}{{VI}{6}{CONCLUSIONS}{section.6}{}}
+\bibcite{goodfellow2010help}{{3}{2010}{{Goodfellow et~al.}}{{Goodfellow, Koenig, Muja, Pantofaru, Sorokin, and Takayama}}}
+\bibcite{gopinath2017human}{{4}{2017}{{Gopinath et~al.}}{{Gopinath, Jain, and Argall}}}
+\bibcite{herlant2016assistive}{{5}{2016}{{Herlant et~al.}}{{Herlant, Holladay, and Srinivasa}}}
+\bibcite{holladay2014legible}{{6}{2014}{{Holladay et~al.}}{{Holladay, Dragan, and Srinivasa}}}
+\bibcite{monsell2003task}{{7}{2003}{{Monsell}}{{}}}
+\bibcite{nuttin2002selection}{{8}{2002}{{Nuttin et~al.}}{{Nuttin, Vanhooydonck, Demeester, and Van~Brussel}}}
+\bibcite{rosenthal2010effective}{{9}{2010}{{Rosenthal et~al.}}{{Rosenthal, Biswas, and Veloso}}}
+\bibcite{sorokin2010people}{{10}{2010}{{Sorokin et~al.}}{{Sorokin, Berenson, Srinivasa, and Hebert}}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Total number of assistance requests during on-demand paradigm.}}{8}{table.4}}
+\newlabel{ONDEMAND}{{IV}{8}{Total number of assistance requests during on-demand paradigm}{table.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}DISCUSSION AND CONCLUSIONS}{8}{section.7}}
+\newlabel{DC}{{VII}{8}{DISCUSSION AND CONCLUSIONS}{section.7}{}}
+\bibcite{tsui2008development}{{11}{2008}{{Tsui et~al.}}{{Tsui, Yanco, Kontak, and Beliveau}}}
+\bibcite{volosyak2005rehabilitation}{{12}{2005}{{Volosyak et~al.}}{{Volosyak, Ivlev, and Graser}}}

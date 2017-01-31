@@ -47,7 +47,7 @@ for i=1:total_subjects
     numfids = length(fnames);
     for j=3:numfids
         n = fnames(j).name;
-        fprintf('FILENAME is %s\n', n);
+%         fprintf('FILENAME is %s\n', n);
         load(n);
         temp = n; n(end-3:end) = []; %remove .mat extension
         if length(n) == 14
@@ -84,7 +84,7 @@ for i=1:total_subjects
             
             mode_switch_ignore_list = zeros(length(normalized_assistance_times), 1);
             for kk = 1:size(normalized_assistance_times, 1)
-                disp(normalized_assistance_times(kk));
+%                 disp(normalized_assistance_times(kk));
                 mode_switch_ignore_list(kk) = find(abs(normalized_mode_switch_times - normalized_assistance_times(kk)) < 0.001);
             end
             
@@ -122,6 +122,31 @@ for i=1:total_subjects
                 cdim_ar_conf_all(trialnum, ph, subid) = {-1};
                 cmode_ar_conf_all(trialnum, ph, subid) = {-1};
             end
+            
+            
+            %Snippet for checking if the algorithm computed the same mode
+            %as the person. Most likely not. Because the algorithm at every
+            %point is in a confused state. all goals are equally likely.
+            %The human on the other hand is fully confident of what goal
+            %s/he is going for. 
+            mst = mode_switch_time_stamps(trialnum, ph, subid); mst = mst{1};
+            diffmst = diff(mst);
+            mst_ind = find(diffmst > 1);
+            ms = mode_switches_all(trialnum, ph, subid); ms = ms{1};
+%             ms = ms(mst_ind);
+            if ~isempty(diffmst) && diffmst(end) < 1
+                ms = [ms(mst_ind) ; ms(end)]; 
+                mst_ind = [mst_ind ; length(mst)];
+            else
+                ms = ms(mst_ind);
+            end
+            cm = cmode_ms_conf_all(trialnum, ph, subid); cm = cm{1};
+            [c,ind] = max(cm, [], 2);
+            cm = ind(mst_ind);
+            disp(sum(cm == ms));
+            
+            
+            
             
         else
 %             mode_switch_time_stamps(trialnum, ph, subid) = {-1};

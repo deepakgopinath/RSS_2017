@@ -7,13 +7,18 @@ interfaces_cell = {'ms_g4_jw','ms_g4_jwo','ms_g5_jw','ms_g5_jwo';
                 
                 
 jit_factor = [0.02, 0.005];
+
 ylims = [8, 22];
 for kk=1:length(interfaces)
     v1 = eval(interfaces_cell{kk,1});
     v2 = eval(interfaces_cell{kk,2});
     v3 = eval(interfaces_cell{kk,3});
     v4 = eval(interfaces_cell{kk,4});
-    figure; hold on;
+    if kk == 1
+        subplot(2,2,1); hold on; grid on;
+    else
+        subplot(2,2,2); hold on; grid on;
+    end
     uvals = unique(v1);
     distri = zeros(length(uvals),1);
     for i=1:length(uvals)
@@ -22,7 +27,7 @@ for kk=1:length(interfaces)
 
     for i=1:length(v1)
         if distri(uvals == v1(i)) > 1
-            scatter(0.8, v1(i),'o','r', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*distri(uvals == v1(i)));
+            scatter(0.8, v1(i),'o','r', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*(distri(uvals == v1(i)) - 1));
         else
             scatter(0.8, v1(i),'o','r', 'LineWidth', 1.5);
         end
@@ -36,7 +41,7 @@ for kk=1:length(interfaces)
 
     for i=1:length(v2)
         if distri(uvals == v2(i)) > 1
-            scatter(1.2, v2(i),'o','k', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*distri(uvals == v2(i)));
+            scatter(1.2, v2(i),'o','k', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*(distri(uvals == v2(i)) - 1));
             hold on;
         else
             scatter(1.2, v2(i),'o','k', 'LineWidth', 1.5);
@@ -51,7 +56,7 @@ for kk=1:length(interfaces)
 
     for i=1:length(v3)
         if distri(uvals == v3(i)) > 1
-            scatter(2.8, v3(i),'o','r', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*distri(uvals == v3(i)));
+            scatter(2.8, v3(i),'o','r', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*(distri(uvals == v3(i)) - 1));
         else
             scatter(2.8, v3(i),'o','r', 'LineWidth', 1.5);
         end
@@ -65,21 +70,21 @@ for kk=1:length(interfaces)
 
     for i=1:length(v4)
         if distri(uvals == v4(i)) > 1
-            scatter(3.2, v4(i),'o','k', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*distri(uvals == v4(i)));
+            scatter(3.2, v4(i),'o','k', 'LineWidth', 1.5, 'jitter', 'on', 'jitterAmount', jit_factor(kk)*(distri(uvals == v4(i)) -  1));
             hold on;
         else
             scatter(3.2, v4(i),'o','k', 'LineWidth', 1.5);
         end
     end
-    scatter(0.8, mean(v1), 100, 'X', 'b', 'LineWidth',4.5);
-    scatter(1.2, mean(v2), 100, 'X', 'b', 'LineWidth',4.5);
-    scatter(2.8, mean(v3), 100, 'X', 'b', 'LineWidth',4.5);
-    scatter(3.2, mean(v4), 100, 'X', 'b', 'LineWidth',4.5);
+%     scatter(0.8, mean(v1), 100, 'X', 'b', 'LineWidth',4.5);
+%     scatter(1.2, mean(v2), 100, 'X', 'b', 'LineWidth',4.5);
+%     scatter(2.8, mean(v3), 100, 'X', 'b', 'LineWidth',4.5);
+%     scatter(3.2, mean(v4), 100, 'X', 'b', 'LineWidth',4.5);
     
-    scatter(0.8, median(v1), 100, 'X', 'c', 'LineWidth',4.5);
-    scatter(1.2, median(v2), 100, 'X', 'c', 'LineWidth',4.5);
-    scatter(2.8, median(v3), 100, 'X', 'c', 'LineWidth',4.5);
-    scatter(3.2, median(v4), 100, 'X', 'c', 'LineWidth',4.5);
+    scatter(0.8, median(v1), 100, 'X', 'b', 'LineWidth',4.5);
+    scatter(1.2, median(v2), 100, 'X', 'b', 'LineWidth',4.5);
+    scatter(2.8, median(v3), 100, 'X', 'b', 'LineWidth',4.5);
+    scatter(3.2, median(v4), 100, 'X', 'b', 'LineWidth',4.5);
     
      
     
@@ -91,16 +96,19 @@ for kk=1:length(interfaces)
     grid on;
 %     
     if kk == 1
-        set(gca, 'YTick', 1:1:ylims(kk));
-        title('With and Without Assistance - Joystick  ');
-    else
-        set(gca, 'YTick', 1:4:ylims(kk));
-         title('With and Without Assistance - Headarray');
-    end
-    set(gca, 'XTick', 1:1:3);
-    set(gca, 'XTickLabel', {'\fontsize{10}TASK 1','', '\fontsize{10}TASK 2'});
+        set(gca, 'YTick', 0:1:ylims(kk));
+        title('\bf \fontsize{16} Joystick  ');
+        set(gca, 'XTick', 1:1:3);
+    set(gca, 'XTickLabel', {'\bf \fontsize{10}TASK 1','', '\bf \fontsize{10}TASK 2'});
     ylabel('\fontsize{14} Number of Mode Switches');
-    
+    else
+        set(gca, 'YTick', 0:4:ylims(kk));
+         title('\bf \fontsize{16} Headarray');
+         set(gca, 'XTick', 1:1:3);
+    set(gca, 'XTickLabel', {'\bf \fontsize{10}TASK 1','', '\bf \fontsize{10}TASK 2'});
+%     ylabel('\fontsize{14} Number of Mode Switches');
+    end
+   
     
     %wilcoxon rank sum
    [p,h] = ranksum(v1, v2);
@@ -134,12 +142,12 @@ for kk=1:length(interfaces)
         text(3.0, ypos+3*yoffset, '*', 'HorizontalAlignment', 'Center', 'BackGroundcolor', 'none', 'FontSize', 15);
    end
    if kk ==1
-    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - With Assis', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
-    text(max(xlim)/2, max(ylim)-1.5, '\fontsize{11}\color{black}o - Without Assis', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
+    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - Assisted', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
+    text(max(xlim)/2, max(ylim)-1.5, '\fontsize{11}\color{black}o - Manual', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
     
    else
-    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - With Assis', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
-    text(max(xlim)/2, max(ylim)-2.5, '\fontsize{11}\color{black}o - Without Assis', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
+    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - Assisted', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
+    text(max(xlim)/2, max(ylim)-2.5, '\fontsize{11}\color{black}o - Manual', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
     
    end
 end

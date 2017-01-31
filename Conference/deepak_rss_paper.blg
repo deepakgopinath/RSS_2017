@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: deepak_rss_paper.aux
 The style file: plainnat.bst
 Database file #1: references.bib
-Warning--empty journal in dragan2013generating
-You've used 9 entries,
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            648 strings with 6835 characters,
-and the built_in function-call counts, 5208 in all, are:
-= -- 499
-> -- 259
-< -- 8
-+ -- 87
-- -- 78
-* -- 396
-:= -- 737
-add.period$ -- 33
-call.type$ -- 9
-change.case$ -- 53
-chr.to.int$ -- 9
-cite$ -- 19
-duplicate$ -- 258
-empty$ -- 436
-format.name$ -- 89
-if$ -- 1156
+            667 strings with 7828 characters,
+and the built_in function-call counts, 7640 in all, are:
+= -- 735
+> -- 403
+< -- 11
++ -- 135
+- -- 123
+* -- 591
+:= -- 1069
+add.period$ -- 46
+call.type$ -- 12
+change.case$ -- 77
+chr.to.int$ -- 12
+cite$ -- 24
+duplicate$ -- 371
+empty$ -- 622
+format.name$ -- 135
+if$ -- 1710
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 9
-newline$ -- 53
-num.names$ -- 36
-pop$ -- 123
+missing$ -- 12
+newline$ -- 68
+num.names$ -- 48
+pop$ -- 181
 preamble$ -- 1
-purify$ -- 44
+purify$ -- 65
 quote$ -- 0
-skip$ -- 203
+skip$ -- 296
 stack$ -- 0
-substring$ -- 260
-swap$ -- 68
-text.length$ -- 6
+substring$ -- 394
+swap$ -- 112
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 99
-warning$ -- 1
-while$ -- 49
+type$ -- 132
+warning$ -- 0
+while$ -- 70
 width$ -- 0
-write$ -- 128
-(There was 1 warning)
+write$ -- 173

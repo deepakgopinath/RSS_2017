@@ -9,8 +9,8 @@
 Young~Sang Choi, Cressel~D Anderson, Jonathan~D Glass, and Charles~C Kemp.
 \newblock Laser pointers and a touch screen: intuitive interfaces for
   autonomous mobile manipulation for the motor impaired.
-\newblock In \emph{Proceedings of the 10th international ACM SIGACCESS
-  conference on Computers and accessibility}, pages 225--232. ACM, 2008.
+\newblock In \emph{Proceedings of the 10th International ACM SIGACCESS
+  Conference on Computers and accessibility}, pages 225--232. ACM, 2008.
 
 \bibitem[Dragan et~al.(2013)Dragan, Lee, and Srinivasa]{dragan2013legibility}
 Anca~D Dragan, Kenton~CT Lee, and Siddhartha~S Srinivasa.
@@ -24,7 +24,7 @@ Ian~J Goodfellow, Nate Koenig, Marius Muja, Caroline Pantofaru, Alexander
   Sorokin, and Leila Takayama.
 \newblock Help me help you: Interfaces for personal robots.
 \newblock In \emph{Proceedings of the 5th ACM/IEEE international conference on
-  Human-robot interaction}, pages 187--188. IEEE Press, 2010.
+  Human-robot interaction}, pages 187--188. IEEE, 2010.
 
 \bibitem[Gopinath et~al.(2017)Gopinath, Jain, and Argall]{gopinath2017human}
 Deepak Gopinath, Siddarth Jain, and Brenna~D Argall.
@@ -38,8 +38,8 @@ Deepak Gopinath, Siddarth Jain, and Brenna~D Argall.
 Laura~V Herlant, Rachel~M Holladay, and Siddhartha~S Srinivasa.
 \newblock Assistive teleoperation of robot arms via automatic time-optimal mode
   switching.
-\newblock In \emph{The Eleventh ACM/IEEE International Conference on
-  Human--Robot Interaction (HRI)}, pages 35--42. IEEE, 2016.
+\newblock In \emph{The 11th ACM/IEEE International Conference on Human--Robot
+  Interaction (HRI)}, pages 35--42. IEEE, 2016.
 
 \bibitem[Holladay et~al.(2014)Holladay, Dragan, and
   Srinivasa]{holladay2014legible}
@@ -59,9 +59,8 @@ Stephen Monsell.
 Marnix Nuttin, Dirk Vanhooydonck, Eric Demeester, and Hendrik Van~Brussel.
 \newblock Selection of suitable human-robot interaction techniques for
   intelligent wheelchairs.
-\newblock In \emph{Robot and Human Interactive Communication, 2002.
-  Proceedings. 11th IEEE International Workshop on}, pages 146--151. IEEE,
-  2002.
+\newblock In \emph{Proceedings of the 11th IEEE International Workshop on Robot
+  and Human Interactive Communication, 2002.}, pages 146--151. IEEE, 2002.
 
 \bibitem[Rosenthal et~al.(2010)Rosenthal, Biswas, and
   Veloso]{rosenthal2010effective}
@@ -85,8 +84,8 @@ Alexander Sorokin, Dmitry Berenson, Siddhartha~S Srinivasa, and Martial Hebert.
 Katherine Tsui, Holly Yanco, David Kontak, and Linda Beliveau.
 \newblock Development and evaluation of a flexible interface for a wheelchair
   mounted robotic arm.
-\newblock In \emph{Proceedings of the 3rd ACM/IEEE international conference on
-  Human robot interaction}, pages 105--112. ACM, 2008.
+\newblock In \emph{Proceedings of the 3rd ACM/IEEE International Conference on
+  Human Robot Interaction}, pages 105--112. ACM, 2008.
 
 \bibitem[Volosyak et~al.(2005)Volosyak, Ivlev, and
   Graser]{volosyak2005rehabilitation}

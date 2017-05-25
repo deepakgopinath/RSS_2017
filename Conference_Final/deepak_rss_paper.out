@@ -9,14 +9,12 @@
 \BOOKMARK [3][-]{subsubsection.3.3.3}{Difference between largest confidences}{subsection.3.3}% 9
 \BOOKMARK [3][-]{subsubsection.3.3.4}{Gradients}{subsection.3.3}% 10
 \BOOKMARK [2][-]{subsection.3.4}{Blending paradigm}{section.3}% 11
-\BOOKMARK [1][-]{section.4}{EMPIRICAL VALIDATION}{}% 12
-\BOOKMARK [2][-]{subsection.4.1}{Robotic Platform}{section.4}% 13
-\BOOKMARK [2][-]{subsection.4.2}{Assistance Paradigms}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.3}{Task Descriptions}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.4}{Control Interfaces}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{SIMULATION RESULTS}{}% 17
-\BOOKMARK [1][-]{section.6}{PILOT STUDY}{}% 18
-\BOOKMARK [2][-]{subsection.6.1}{Pilot Study Protocol and Metrics}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.2}{Pilot Study Results}{section.6}% 20
-\BOOKMARK [2][-]{subsection.6.3}{Discussion}{section.6}% 21
-\BOOKMARK [1][-]{section.7}{CONCLUSIONS}{}% 22
+\BOOKMARK [1][-]{section.4}{SIMULATION RESULTS}{}% 12
+\BOOKMARK [1][-]{section.5}{PILOT STUDY}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Experimental Setup - Hardware}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Assistance Paradigms}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Task Descriptions}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.4}{Pilot Study Protocol and Metrics}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.5}{Pilot Study Results}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.6}{Discussion}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{CONCLUSIONS}{}% 20

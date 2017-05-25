@@ -1,0 +1,98 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Choi et~al.(2008)Choi, Anderson, Glass, and Kemp]{choi2008laser}
+Young~Sang Choi, Cressel~D Anderson, Jonathan~D Glass, and Charles~C Kemp.
+\newblock Laser pointers and a touch screen: intuitive interfaces for
+  autonomous mobile manipulation for the motor impaired.
+\newblock In \emph{Proceedings of the 10th International ACM SIGACCESS
+  Conference on Computers and accessibility}, pages 225--232. ACM, 2008.
+
+\bibitem[Dragan et~al.(2013)Dragan, Lee, and Srinivasa]{dragan2013legibility}
+Anca~D Dragan, Kenton~CT Lee, and Siddhartha~S Srinivasa.
+\newblock Legibility and predictability of robot motion.
+\newblock In \emph{2013 8th ACM/IEEE International Conference on Human-Robot
+  Interaction (HRI)}, pages 301--308. IEEE, 2013.
+
+\bibitem[Goodfellow et~al.(2010)Goodfellow, Koenig, Muja, Pantofaru, Sorokin,
+  and Takayama]{goodfellow2010help}
+Ian~J Goodfellow, Nate Koenig, Marius Muja, Caroline Pantofaru, Alexander
+  Sorokin, and Leila Takayama.
+\newblock Help me help you: Interfaces for personal robots.
+\newblock In \emph{Proceedings of the 5th ACM/IEEE international conference on
+  Human-robot interaction}, pages 187--188. IEEE, 2010.
+
+\bibitem[Gopinath et~al.(2017)Gopinath, Jain, and Argall]{gopinath2017human}
+Deepak Gopinath, Siddarth Jain, and Brenna~D Argall.
+\newblock Human-in-the-loop optimization of shared autonomy in assistive
+  robotics.
+\newblock \emph{IEEE Robotics and Automation Letters}, 2\penalty0 (1):\penalty0
+  247--254, 2017.
+
+\bibitem[Herlant et~al.(2016)Herlant, Holladay, and
+  Srinivasa]{herlant2016assistive}
+Laura~V Herlant, Rachel~M Holladay, and Siddhartha~S Srinivasa.
+\newblock Assistive teleoperation of robot arms via automatic time-optimal mode
+  switching.
+\newblock In \emph{The 11th ACM/IEEE International Conference on Human--Robot
+  Interaction (HRI)}, pages 35--42. IEEE, 2016.
+
+\bibitem[Holladay et~al.(2014)Holladay, Dragan, and
+  Srinivasa]{holladay2014legible}
+Rachel~M Holladay, Anca~D Dragan, and Siddhartha~S Srinivasa.
+\newblock Legible robot pointing.
+\newblock In \emph{The 23rd IEEE International Symposium on Robot and Human
+  Interactive Communication (RO-MAN), 2014}, pages 217--223. IEEE, 2014.
+
+\bibitem[Monsell(2003)]{monsell2003task}
+Stephen Monsell.
+\newblock Task switching.
+\newblock \emph{Trends in cognitive sciences}, 7\penalty0 (3):\penalty0
+  134--140, 2003.
+
+\bibitem[Nuttin et~al.(2002)Nuttin, Vanhooydonck, Demeester, and
+  Van~Brussel]{nuttin2002selection}
+Marnix Nuttin, Dirk Vanhooydonck, Eric Demeester, and Hendrik Van~Brussel.
+\newblock Selection of suitable human-robot interaction techniques for
+  intelligent wheelchairs.
+\newblock In \emph{Proceedings of the 11th IEEE International Workshop on Robot
+  and Human Interactive Communication, 2002.}, pages 146--151. IEEE, 2002.
+
+\bibitem[Rosenthal et~al.(2010)Rosenthal, Biswas, and
+  Veloso]{rosenthal2010effective}
+Stephanie Rosenthal, Joydeep Biswas, and Manuela Veloso.
+\newblock An effective personal mobile robot agent through symbiotic
+  human-robot interaction.
+\newblock In \emph{Proceedings of the 9th International Conference on
+  Autonomous Agents and Multiagent Systems}, pages 915--922. International
+  Foundation for Autonomous Agents and Multiagent Systems, 2010.
+
+\bibitem[Sorokin et~al.(2010)Sorokin, Berenson, Srinivasa, and
+  Hebert]{sorokin2010people}
+Alexander Sorokin, Dmitry Berenson, Siddhartha~S Srinivasa, and Martial Hebert.
+\newblock People helping robots helping people: Crowdsourcing for grasping
+  novel objects.
+\newblock In \emph{2010 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 2117--2122. IEEE, 2010.
+
+\bibitem[Tsui et~al.(2008)Tsui, Yanco, Kontak, and
+  Beliveau]{tsui2008development}
+Katherine Tsui, Holly Yanco, David Kontak, and Linda Beliveau.
+\newblock Development and evaluation of a flexible interface for a wheelchair
+  mounted robotic arm.
+\newblock In \emph{Proceedings of the 3rd ACM/IEEE International Conference on
+  Human Robot Interaction}, pages 105--112. ACM, 2008.
+
+\bibitem[Volosyak et~al.(2005)Volosyak, Ivlev, and
+  Graser]{volosyak2005rehabilitation}
+Ivan Volosyak, Oleg Ivlev, and Axel Graser.
+\newblock Rehabilitation robot friend ii-the general concept and current
+  implementation.
+\newblock In \emph{9th International Conference on Rehabilitation Robotics
+  (ICORR), 2005}, pages 540--544. IEEE, 2005.
+
+\end{thebibliography}

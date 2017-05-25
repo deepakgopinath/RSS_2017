@@ -15,9 +15,9 @@ for kk=1:length(interfaces)
     v3 = eval(interfaces_cell{kk,3});
     v4 = eval(interfaces_cell{kk,4});
     if kk == 1
-        subplot(2,2,1); hold on; grid on;
+        subplot(1,2,1); hold on; grid on;
     else
-        subplot(2,2,2); hold on; grid on;
+        subplot(1,2,2); hold on; grid on;
     end
     uvals = unique(v1);
     distri = zeros(length(uvals),1);
@@ -99,13 +99,13 @@ for kk=1:length(interfaces)
         set(gca, 'YTick', 0:1:ylims(kk));
         title('\bf \fontsize{16} Joystick  ');
         set(gca, 'XTick', 1:1:3);
-    set(gca, 'XTickLabel', {'\bf \fontsize{10}TASK 1','', '\bf \fontsize{10}TASK 2'});
+    set(gca, 'XTickLabel', {'\bf \fontsize{10}RsG','', '\bf \fontsize{10}RdG'});
     ylabel('\fontsize{14} Number of Mode Switches');
     else
         set(gca, 'YTick', 0:4:ylims(kk));
          title('\bf \fontsize{16} Headarray');
          set(gca, 'XTick', 1:1:3);
-    set(gca, 'XTickLabel', {'\bf \fontsize{10}TASK 1','', '\bf \fontsize{10}TASK 2'});
+    set(gca, 'XTickLabel', {'\bf \fontsize{10}RsG','', '\bf \fontsize{10}RdG'});
 %     ylabel('\fontsize{14} Number of Mode Switches');
     end
    
@@ -142,11 +142,11 @@ for kk=1:length(interfaces)
         text(3.0, ypos+3*yoffset, '*', 'HorizontalAlignment', 'Center', 'BackGroundcolor', 'none', 'FontSize', 15);
    end
    if kk ==1
-    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - Assisted', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
+    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - Disambiguation', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
     text(max(xlim)/2, max(ylim)-1.5, '\fontsize{11}\color{black}o - Manual', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
     
    else
-    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - Assisted', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
+    text(max(xlim)/2, max(ylim)-1, '\fontsize{11}\color{red}o - Disambiguation', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
     text(max(xlim)/2, max(ylim)-2.5, '\fontsize{11}\color{black}o - Manual', 'HorizontalAlignment', 'Center','BackGroundColor','none', 'FontSize', 10);
     
    end

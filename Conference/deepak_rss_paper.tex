@@ -184,9 +184,9 @@ The disambiguation metric $D_m$ is a measure of how legible the user commands wo
 \subsection{Confidence function}\label{CF}
 The choice of confidence function is entirely up to the system designer and numerous options exist. An example of a simple distance-based confidence function is
 \begin{equation*}\label{EQ1}
-c(\boldsymbol{x}, \boldsymbol{x_g}) = \max(0, 1 - \frac{\norm{\boldsymbol{x} - \boldsymbol{x}_{g}}}{D})
+c(\boldsymbol{x}, \boldsymbol{x_g}) = \max(0, 1 - \frac{\norm{\boldsymbol{x} - \boldsymbol{x}_{g}}}{R})
 \end{equation*}
-where $\boldsymbol{x}$ is the current position of the robot, $\boldsymbol{x}_{g}$ is the location of goal $g$, $D$ is the radius of a sphere beyond which the confidence is always $0$ and $\norm{\cdot}$ is the Euclidean norm. We refer to this confidence function as \textbf{C1}. However, this confidence measure ignores all cues regarding human intent present in the control command itself. Therefore a better choice of confidence function should try to capture the ``directedness'' of the human control command towards a goal. One option is
+where $\boldsymbol{x}$ is the current position of the robot, $\boldsymbol{x}_{g}$ is the location of goal $g$, $R$ is the radius of a sphere beyond which the confidence is always $0$ and $\norm{\cdot}$ is the Euclidean norm. We refer to this confidence function as \textbf{C1}. However, this confidence measure ignores all cues regarding human intent present in the control command itself. Therefore a better choice of confidence function should try to capture the ``directedness'' of the human control command towards a goal. One option is
 \begin{equation*}\label{EQ2}
 c({\boldsymbol{x},\boldsymbol{x_g}, \boldsymbol{u}_{h}}) = \boldsymbol{u}_h\cdot(\boldsymbol{x}_{g} - \boldsymbol{x})
 \end{equation*}
@@ -231,25 +231,25 @@ This difference is denoted by $\Delta_{k}$ and is computed as
 \Delta_{k} = \max(\mathcal{C}) - \max(\mathcal{C} \setminus {\max(\mathcal{C})})
 \end{equation*}
 \subsubsection{Gradients}
-The propensity for change and information gain upon the continuation of motion along control dimension $k$ is encoded in the gradients $\frac{\partial c}{\partial k}\; \forall\; c\in \mathcal{C}$. The greater the difference between the gradients of individual confidences $c$, the greater will they deviate from each other.  Instead of using closed-form analytical gradients, we approximate the gradients using forward and backward differences. Therefore, 
+The propensity for change and information gain upon the continuation of motion along control dimension $k$ is encoded in the gradients $\frac{\partial c}{\partial x}\; \forall\; c\in \mathcal{C}$. The greater the difference between the gradients of individual confidences $c$, the greater will they deviate from each other.  Instead of using closed-form analytical gradients, we approximate the gradients using forward and backward differences. Therefore, 
 \begin{equation*}
-\frac{\partial c}{\partial k} \approx c_{\delta_x} - c_{x} 
+\frac{\partial c}{\partial x} \approx c_{\delta_x} - c_{x} 
 \end{equation*}
 where $c_x$ denotes the confidence at location $x$.
 In order to quantify the ``spread'' of gradients we define a quantity $\Upsilon_{k}$ which is computed as 
 \begin{equation*}
-\Upsilon_{k} = \sum_{p=1}^{n_g}\sum_{q=p}^{n_g}\Big \lvert\frac{\partial c^p}{\partial k} - \frac{\partial c^q}{\partial k}\Big \rvert
+\Upsilon_{k} = \sum_{p=1}^{n_g}\sum_{q=p}^{n_g}\Big \lvert\frac{\partial c^p}{\partial x} - \frac{\partial c^q}{\partial x}\Big \rvert
 \end{equation*}
 
 \subsubsection*{Putting it all together}
 $\Lambda_{k}$, $\Gamma_{k}$, $\Delta_{k}$ and $\Upsilon_{k}$ are then combined to compute $D_{k}$ as 
 \begin{equation}\label{DK}
-D_{k} = \underbrace{\boldsymbol{w}\cdot(\Lambda_{k}\cdot \Gamma_{k}\cdot \Delta_{k})}_{\text{long term}} + \underbrace{(1 - \boldsymbol{w})\cdot \Upsilon_{k}}_{\text{short term}}
+D_{k} = \underbrace{\boldsymbol{w}\cdot(\Lambda_{k}\cdot \Gamma_{k}\cdot \Delta_{k})}_{\text{short term}} + \underbrace{(1 - \boldsymbol{w})\cdot \Upsilon_{k}}_{\text{long term}}
 \end{equation}
 where $\boldsymbol{w}$ controls the relative contribution of immediate and the long term benefit. Equation~\ref{DK} actually is computed twice, once in each of the positive ($\delta_x = x + \Delta x$) and negative directions ($\delta_x = x - \Delta x$), and the results are then summed. 
-Once the disambiguation metric $D_k$ for each control dimension $k$ is computed, the disambiguation metric $D_m$ for control mode m is calculated as 
+Once the disambiguation metric $D_k$ for each control dimension $k$ is computed, the disambiguation metric $\boldsymbol{D}_m$ for control mode m is calculated as 
 \begin{equation*}
-D_m = \sum_{j} D_{k} \; \forall \; k \in m
+\boldsymbol{D}_m = \sum_{k} D_{k} \; \forall \; k \in m
 \end{equation*}
 The control dimension with highest disambiguation capability $\boldsymbol{k}^*$ is given by
 \begin{equation*}
@@ -257,7 +257,7 @@ The control dimension with highest disambiguation capability $\boldsymbol{k}^*$ 
 \end{equation*}
  and the mode with highest disambiguation capability $\boldsymbol{m}^{*}$ is given by
 \begin{equation*}
-\boldsymbol{m}^* = \argmax_m D_m
+\boldsymbol{m}^* = \argmax_m \boldsymbol{D}_m
 \end{equation*}
 Disambiguation mode $\boldsymbol{m}^{*}$ is the mode that the algorithm chooses \textit{for} the human to better their intent. Any subsequent control command issued by the user in $\boldsymbol{m}^*$ is likely to be more legible due to maximal goal confidence disambiguation.
 

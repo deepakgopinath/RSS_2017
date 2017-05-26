@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: deepak_rss_paper.aux
 The style file: plainnat.bst
 Database file #1: references.bib
-You've used 14 entries,
+Warning--can't use both volume and number fields in baker2007goal
+You've used 20 entries,
             2773 wiz_defined-function locations,
-            677 strings with 8165 characters,
-and the built_in function-call counts, 8802 in all, are:
-= -- 848
-> -- 463
-< -- 13
-+ -- 155
-- -- 141
-* -- 681
-:= -- 1233
-add.period$ -- 53
-call.type$ -- 14
-change.case$ -- 89
-chr.to.int$ -- 14
-cite$ -- 28
-duplicate$ -- 426
-empty$ -- 717
-format.name$ -- 157
-if$ -- 1967
+            714 strings with 9313 characters,
+and the built_in function-call counts, 11962 in all, are:
+= -- 1131
+> -- 650
+< -- 16
++ -- 218
+- -- 198
+* -- 954
+:= -- 1705
+add.period$ -- 72
+call.type$ -- 20
+change.case$ -- 126
+chr.to.int$ -- 20
+cite$ -- 41
+duplicate$ -- 568
+empty$ -- 975
+format.name$ -- 220
+if$ -- 2634
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 78
-num.names$ -- 56
-pop$ -- 206
+missing$ -- 20
+newline$ -- 108
+num.names$ -- 80
+pop$ -- 278
 preamble$ -- 1
-purify$ -- 75
+purify$ -- 106
 quote$ -- 0
-skip$ -- 342
+skip$ -- 448
 stack$ -- 0
-substring$ -- 457
-swap$ -- 126
-text.length$ -- 11
+substring$ -- 602
+swap$ -- 147
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
-warning$ -- 0
-while$ -- 81
+type$ -- 220
+warning$ -- 1
+while$ -- 109
 width$ -- 0
-write$ -- 200
+write$ -- 279
+(There was 1 warning)

@@ -97,7 +97,7 @@ Brenna D. Argall\authorrefmark{1}\authorrefmark{2}\authorrefmark{3}\authorrefmar
 %The study supports the case for user-driven customization and provides
 %guidance for its continued development and study.
 
-In this paper, we develop an algorithm for goal disambiguation with a shared-control assistive robotic arm. Assistive systems are often required to infer human intent and this usually becomes a bottleneck for providing assistance quickly and accurately. We introduce the notion of \textit{inverse legibility} in which the human-generated actions are legible enough for the \textit{robot} to infer the human intent confidently and accurately. The proposed disambiguation paradigm seeks to elicit legible control commands from the human by selecting control modes that \textit{maximally disambiguate} between the various goals in the scene. We present simulation results which look into the robustness of our algorithm and the impact of the choice of confidence functions on the performance of the system. Our simulation results suggest that the disambiguating control mode computed by our algorithm produces more intuitive results when the confidence function is able to capture the ``directedness'' towards a goal. We also present a pilot study that explores the efficacy of the algorithm on real hardware. Preliminary results indicate that the assistance paradigm proposed was successful in decreasing task effort (number of mode switches) across interfaces and tasks. 
+In this paper, we develop an algorithm for goal disambiguation with a shared-control assistive robotic arm. Assistive systems are often required to infer human intent and this usually becomes a bottleneck for providing assistance quickly and accurately. We introduce the notion of \textit{inverse legibility} in which the human-generated actions are legible enough for the \textit{robot} to infer the human intent confidently and accurately. The proposed disambiguation paradigm seeks to elicit legible control commands from the human by selecting control modes that \textit{maximally disambiguate} between the various goals in the scene. We present simulation results which look into the robustness of our algorithm and the impact of the choice of confidence functions on the performance of the system. Our simulation results suggest that the disambiguating control mode computed by our algorithm produces more intuitive results when the confidence function is able to capture the ``directedness'' towards a goal. We also present a pilot study that explores the efficacy of the algorithm on real hardware. Preliminary results indicate that the assistance paradigm proposed \textcolor{blue}{is a promising approach} in decreasing task effort (number of mode switches) across interfaces and tasks. 
 \end{abstract}
 
 \IEEEpeerreviewmaketitle
@@ -111,7 +111,7 @@ The common paradigm for control of such high-dimensional devices has the human d
 
 Due to the dimensionality mismatch between the control interface and the robotic device, control interfaces operate in \textit{modes} which correspond to different partitions of the control space. Typically, the more limited the control interface is, the greater number of modes there are. In order to have full control of the robot the user will have to switch between the different partitions and this is known as \textit{mode switching or modal control}~\cite{tsui2008development, nuttin2002selection}. 
 
-It has been established that mode switching is expensive and as a result task performance is degraded. Furthermore, it adds to the cognitive and physical burden as each of these mode switches requires the user to shift their attention from the task to performing the mode switch. The introduction of \textit{shared autonomy} to these systems helps to alleviate and address some of these issues by letting the system take responsibility to some extent, thereby reducing the human effort in achieving a goal. 
+It has been established that mode switching is expensive and as a result task performance is degraded. Furthermore, it adds to the cognitive and physical burden as each of these mode switches requires the user to shift their attention from the task to performing the mode switch. The introduction of \textit{shared autonomy} to these systems helps to alleviate and address some of these issues by letting the system take responsibility of task execution partially, thereby reducing the human effort in achieving a goal. 
 
 For any assistive autonomy, the system typically needs an idea of what it is the human is trying to do---either by explicit indication from the user of the task or goal~\cite{choi2008laser}, or by inferring the human's intent from their control signals and/or sensor data. The question of intent inference is key. In this paper, we develop an assistance paradigm that helps with intent inference, by selecting the control mode in which robot motion will \textit{maximally disambiguate} human intent. The faster the autonomy is able to disambiguate intent, the earlier the robot is able to provide autonomy assistance---leading ideally to fewer mode switches and less burdensome executions. 
 
@@ -139,16 +139,16 @@ In Section \ref{RW} we present an overview of relevant research in the area of s
 
 \section{RELATED WORKS}\label{RW} 
 
-Shared-control assistance paradigms help to offload cognitive and physical burden~\cite{volosyak2005rehabilitation} without requiring the user to relinquish complete control, and are usually preferred over fully autonomous assistive robotic systems for reasons of both robustness and user satisfaction. \textcolor{blue}{How exactly should sharing happening between the human and robot control will greatly benefit from intent inference schemes in the shared-control architecture. Methods for intent inference have been extensively studied by roboticists and cognitive scientists alike and can be broadly classified into two categories namely, model-based and heuristic-based. The model-based approach assumes that the agent has an underlying policy that maps states to actions and in order to uncover the intent Bayesian inference algorithms are used. On the other hand, heuristic-based approaches rely on low-level motion cues, biological signals and seek to find direct mappings between the raw signals and the underlying intention and is usually computationally less expensive than model-based approaches. }
+Shared-control assistance paradigms help to offload cognitive and physical burden~\cite{volosyak2005rehabilitation} without requiring the user to relinquish complete control, and are usually preferred over fully autonomous assistive robotic systems for reasons of both robustness and user satisfaction. \textcolor{blue}{How exactly should sharing happening between the human and robot control will greatly benefit from intent inference schemes in the shared-control architecture. Methods for intent inference have been extensively studied by roboticists and cognitive scientists alike and can be broadly classified into two categories namely, model-based and heuristic-based~\cite{baker2017rational}. In model-based approach the agent is typically modeled as a POMDP and acts according to a policy that maps states to actions. In such settings intent inference reduces to solving the inverse problem of computing the posterior distribution over mental states conditioned on observed actions (Bayesian Inference)~\cite{baker2007goal,baker2009action}. On the other hand, heuristic-based approaches rely on low-level motion cues~\cite{barrett2005accurate}, biological signals~\cite{donoghue2002connecting} etc., and seek to find direct mappings between the raw signals and the underlying intention and is usually computationally less expensive than model-based approaches.}
 % One possible way to control high-dimensional assistive devices such as robotic arms is to partition the control space (often 6D for a robotic arm) into subsets called \textit{modes} and have the user control one mode at a time using control interfaces such as joysticks, head arrays and sip-and-puffs. This is known as \textit{modal control}.
 
 Herlant \textit{et al.}~\cite{herlant2016assistive} assesses the difficulties faced by users when they operate assistive devices using \textit{modal control}. In their work they report that a significant number of users found \textit{mode switching} to be slow and burdensome. The cognitive burden of shifting focus (\textit{task switching})  from the task at hand to mode switches can result in a significant decrease in task performance regardless of the control modality~\cite{monsell2003task}. 
 
  A time-optimal mode switch assistance paradigm evaluated on a simulated 2D robot provides insight into the fact that even a simple time-optimal automatic mode switching system can significantly improve user satisfaction while maintaining the quality task performance~\cite{herlant2016assistive}.  Another study~\cite{gopinath2017human} found that it is not always the case that users are trying to optimize for time or effort during task execution. However, our present system therefore does not make \textit{a priori} assumptions regarding the optimizing principles at work when a user operates a robot.
 
-The legibility and predictability of robot motion \textit{to the human} have been thoroughly investigated~\cite{dragan2013legibility}, and different methods for generating legible robot motion have been proposed by Holladay \textit{et al}~\cite{holladay2014legible}. We apply similar concepts of legibility however to the \textit{human control} commands, such that the intent expressed in the human command is clear \textit{to the robot}. Our assistance scheme is intended to bring out a more legible intent-expressive control command from the human, so that the autonomy is able to infer the correct goal more confidently. As long as the confidence measure used to disambiguate between candidate goals captures the predictable aspect of human-generated robot motion, our proposed disambiguation assistance will place user control in that mode which can provide maximal goal disambiguation and improved legibility.
+The legibility and predictability of robot motion \textit{to the human} have been thoroughly investigated~\cite{dragan2013legibility}, and different methods for generating legible robot motion have been proposed by Holladay \textit{et al}~\cite{holladay2014legible}. We apply similar concepts of legibility to the \textit{human control} commands, such that the intent expressed in the human command is clear \textit{to the robot}. Our assistance scheme is intended to bring out a more legible intent-expressive control command from the human, so that the autonomy is able to infer the correct goal more confidently. As long as the confidence measure used to disambiguate between candidate goals captures the predictable aspect of human-generated robot motion, our proposed disambiguation assistance will place user control in that mode which can provide maximal goal disambiguation and improved legibility.
 
-\textcolor{blue}{Eliciting legible commands from the user can also be thought of as information acquistion or active estimation of state. Information acquisition in robotic systems, primarily in navigation problems mobile robots and sensors have been already been actively studied. A typical approach is to model the agent as a POMDP with associated reward structure that reflect some measure of information gain. Miller et al. have also formulated the problem of information gathering as maximizing ergodicity of a robot's trajectory with respect to an underlying  information density map~\cite{miller2013trajectory,miller2016ergodic}. In their work, the information density map is by taking the expected value of the Fisher information}.
+\textcolor{blue}{Eliciting legible commands from the user can also be thought of as an information acquisition problem. Information acquisition in robotic systems, primarily in the context of generating optimal control for mobile robotic sensing systems have been widely studied. A typical approach is to model the problem as an optimal control problem with an associated reward structure that reflect some measure of information gain~\cite{atanasov2014information}. Miller et al. have also formulated the problem of information gathering as maximizing ergodicity of a robot's trajectory with respect to an underlying information density map~\cite{miller2013trajectory,miller2016ergodic}. In their work, the information density map is computed by evaluating the expected value of the Fisher information, which is the amount of information a single measurement reveals at a location}. 
 %In most cases the human knows beforehand what goal he/she is going for and therefore the motion generated by the human is usually \textit{predictable}.
 
 
@@ -265,13 +265,13 @@ Disambiguation mode $\boldsymbol{m}^{*}$ is the mode that the algorithm chooses 
 		\vspace{-0.9cm}
 		\includegraphics[width=0.2\textwidth]{./figures/ArbFunc.png}
 	\end{center}
-		\vspace{-.45cm}
+%		\vspace{-.45cm}
 	\caption{A prototypical arbitration function.}
 	\label{ALPHA}
 \end{wrapfigure}
 \begin{figure*}[ht]
 	\centering
-	\includegraphics[width = 0.9\hsize, height = 0.35\vsize]{./figures/POINT_CLOUD.png}
+	\includegraphics[width = 1\hsize, height = 0.35\vsize]{./figures/POINT_CLOUD.png}
 	\caption{Top row: Best control dimensions for confidence measure \textbf{C1}. Bottom row: Best control dimensions for confidence measure \textbf{C2}. Left column: $\boldsymbol{k}^*$ is X. Middle Column: $\boldsymbol{k}^*$ is Y. Right Column: $\boldsymbol{k}^*$ is Z. Magenta spheres indicate the goal locations.}
 	\label{HM_SEP}
 \end{figure*}
@@ -302,12 +302,6 @@ In our implementation confidence $c_g$ is computed as
 c_g(\boldsymbol{x}, \boldsymbol{u}_h, \boldsymbol{u}_{r,g}) = \boldsymbol{u}_{h}^{trans}\cdot(\boldsymbol{x}_{g} - \boldsymbol{x})^{trans} + \boldsymbol{u}_h^{rot}\cdot\boldsymbol{u}_{r,g}^{(rot)}
 \end{equation}
 where $trans$ refers to the translational and $rot$ refers to the rotational parts of the entire control space. 
-\begin{figure*}[ht]
-	\centering
-	\includegraphics[width = 1\hsize]{./figures/TASKS.png}
-	\caption{Pilot study tasks performed by the subjects. \textit{Left to right:} Simple Reaching (\textit{R}), Reaching with Same Grasp (\textit{RsG}), Reaching with Different Grasp (\textit{RdS}).}
-	\label{TASKS}
-\end{figure*}
 The first term captures the ``directedness'' of the human control command towards the goal $g$ and the second term captures the alignment between the human control command and the autonomous robot policy in the rotational parts of the state space respectively. 
 The blending factor $\alpha$ is a parameterized function of the confidence and is depicted in Figure~\ref{ALPHA}.
  
@@ -321,7 +315,7 @@ Figure~\ref{HM_SEP} shows the results of the simulation. It is clear that the ch
 More importantly, it also sheds light on the efficacy of a confidence function in capturing human intent properly. For the goal distribution used in the simulation, the goal positions are spread out maximally along the $x$ and $z$ axes. Intuitively the system will be able to quickly infer the human's intent if the human control command is either along the $x$ or the $z$ axes. However, this requires that the confidence function indeed captures the ``directedness'' of the human control command. 
 
 Table~\ref{HMD} reports the number of times the algorithm picked each of the three control dimensions, for each confidence function.  
-\textbf{C1} often was unable to capture the human intent properly. Furthermore, \textbf{C1} had ``null'' spaces where all confidences were identically equal to zero and therefore disambiguation was not possible.  
+\textbf{C1} often was unable to capture the human intuition properly. Furthermore, \textbf{C1} had ``null'' spaces where all confidences were identically equal to zero and therefore disambiguation was not possible.
 \begin{table}[t]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
@@ -364,28 +358,31 @@ If the best mode in the perturbed position was the same mode as $\boldsymbol{m}^
  Moreover, the algorithm can be used to pre-compute the best modes ahead of time and can be used as a look-up table during task execution for automated mode switching. A single mode switch assistance provided at the beginning of the trial might not be enough to and therefore automated mode switching during task execution will be critical to improve task performance especially for more limited interfaces. 
  \section{PILOT STUDY} \label{EXP}
  We next investigate the use and utility of our disambiguation approach in a pilot study. Four subjects participated in the pilot study, (3 male, 1 female), and all were lab members.
- \subsection{Experimental Setup - Hardware}
- 
+ \subsection{Hardware}
+ \begin{figure*}[ht]
+ 	\centering
+ 	\includegraphics[width = 1\hsize]{./figures/TASKS.png}
+ 	\caption{Pilot study tasks performed by the subjects. \textit{Left to right:} Simple Reaching (\textit{R}), Reaching with Same Grasp (\textit{RsG}), Reaching with Different Grasp (\textit{RdS}).}
+ 	\label{TASKS}
+ \end{figure*}
  The experiments were performed using real hardware and simulated versions of the MICO robotic arm (Kinova Robotics, Canada), which is a 6 DOF robotic arm specifically designed for assistive purposes. The software system was implemented using the Robot Operating System (ROS) and data analysis was performed using MATLAB. 
  
  The human control command $\boldsymbol{u}_h$ was captured using two different control interfaces: 2-axis joystick and a head array shown in Figure~\ref{J2_HA}. 
  A 2-axis joystick generates continuous signals and is capable of controlling a maximum of two control dimensions at a time. Control modes can be accessed using the buttons on the interface. 
- On the other hand, head array  is a switch-based discrete teleoperation device. Head array consists of three switches \textcolor{blue}{to be operated by the back and sides of the head}.\textcolor{blue}{When used for controlling a robotic arm, the switch at the back is used to cycle between the modes and the switches on the left and right side are to control the motion of the end-effector in the positive and negative direction along a degree-of-freedom.}
- \begin{figure}[h]
+ On the other hand, head array  is a switch-based discrete teleoperation device. Head array consists of three switches \textcolor{blue}{to be operated by the back and sides of the head}.\textcolor{blue}{When used for controlling a robotic arm, the switch at the back is used to cycle between the modes and the switches on the left and right side are to control the motion of the end-effector in the positive and negative direction along a control dimension.}
+ The control interface signals are mapped to Cartesian velocities of the end effector of the robot. Additionally, the interfaces can also be used to request mode switch assistance. In using two interfaces, we hope to observe an increase in task effort for the head array due to the limited bandwidth and discrete nature of the control signals.
+   \begin{figure}[h]
  	\centering
- 	\includegraphics[width = 0.9\hsize, height = 0.12\vsize]{./figures/INTER.png}
+ 	\includegraphics[width = 0.9\hsize, height = 0.16\vsize]{./figures/INTER.png}
  	\caption{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right)}
  	\label{J2_HA}
  \end{figure}
- 
- 
- The control interface signals are mapped to Cartesian velocities of the end effector of the robot. Additionally, the interfaces can also be used to request mode switch assistance. In using two interfaces, we hope to observe an increase in task effort for the head array due to the limited bandwidth and discrete nature of the control signals.
  \subsection{Assistance Paradigms}
- Three kinds of mode switching paradigms were evaluated. Note that the blending assistance was always running for all three paradigms.
+ Three kinds of mode switching paradigms were evaluated. Note that the blending assistance \textcolor{blue}{(as described in Section~\ref{BP})} was always running for all three paradigms.
  
- \noindent\underline{\textit{Manual}}: \textcolor{blue}{In this paradigm, when the trial begins, the initial control mode is randomized and during task execution the user manually performs all subsequent mode switches.}
+ \noindent\underline{\textit{Manual}}: \textcolor{blue}{In this paradigm, when the trial begins the initial control mode is randomized and during task execution the user manually performs all subsequent mode switches.}
  
- \noindent\underline{\textit{Disambiguation}}: In this paradigm, the disambiguation system is activated right at the beginning of a trial. The algorithm identifies the ``best mode'' $\boldsymbol{m}^*$ and starts the trial in control mode $\boldsymbol{m}^*$. All subsequent mode switches are performed manually by the user. Furthermore, the user is required to first move in the selected mode before manually switching the mode. 
+ \noindent\underline{\textit{Disambiguation}}: In this paradigm, the disambiguation system is activated right at the beginning of a trial. The algorithm identifies the ``best mode'' $\boldsymbol{m}^*$ and starts the trial in mode $\boldsymbol{m}^*$. All subsequent mode switches are performed manually by the user. Furthermore, the user is required to first move in the selected mode before manually switching the mode. 
  
  \noindent\underline{\textit{On Demand}}: In this paradigm, the user can request a mode switch assistance at any time during task execution. This paradigm is exploratory and seeks to find underlying patterns in assistance request behavior.
  
@@ -397,12 +394,7 @@ If the best mode in the perturbed position was the same mode as $\boldsymbol{m}^
  
  \noindent\underline{\textit{Reaching with Different Grasp (RdG)}}: This is a more difficult task that \textit{RsG} in which the user operates the robot to perform reaching motions to one of five objects in the scene with different grasp orientations.
  
- Analysis was performed only on data collected from \textit{RsG} and \textit{RdG}.  
- 
-
-%\section{PILOT STUDY}
-
-
+ \textcolor{blue}{Data from both tasks (\textit{RsG} and \textit{RdG})  were pooled for analysis purposes}. 
 
 \subsection{Pilot Study Protocol and Metrics}
 
@@ -419,9 +411,9 @@ In phase II, the user performed the same task using both interfaces using the \t
 %\subsection{Simulation Results}
 
 \subsection{Pilot Study Results}\label{RES}
-An improvement in task performance in terms of a decrease in the number of mode switches was observed across all task--interface combinations. Statistical significance in Figure~\ref{DATAPLOT} is determined by two-sided Wilcoxon Rank-Sum Test, where (*) indicates $p < 0.05$.
+An improvement in task performance in terms of a decrease in the number of mode switches was observed across both interfaces. Statistical significance in Figure~\ref{DATAPLOT} is determined by two-sided Wilcoxon Rank-Sum Test, where (*) indicates $p < 0.05$ and (***) indicates $p < 0.001$.
 
-	\begin{figure}[t]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width = 1.1\hsize,center]{./figures/FINAL_PLOT.png}
 	\vspace{-0.7cm}
@@ -429,11 +421,12 @@ An improvement in task performance in terms of a decrease in the number of mode 
 	\label{DATAPLOT}
 \end{figure}
 \vspace{0.1cm}
-\noindent{\underline{\textit{Mode Switches}}}: Figure~\ref{DATAPLOT} (top row) reveals the general trend of a decrease in the number of mode switches across all task-interface combinations. However, the difference in the number of mode switches was statistically significant only when using the joystick. This indicates that upon starting in a mode identified by the algorithm, the number of subsequent mode switches performed by the user was reduced. 
+\noindent{\underline{\textit{Mode Switches}}}: Figure~\ref{DATAPLOT} (top row) reveals the general trend of a decrease in the number of mode switches across both. However, the difference in the number of mode switches was statistically significant only when using the joystick. This indicates that upon starting in a mode identified by the algorithm, the number of subsequent mode switches performed by the user was reduced. 
 
 \vspace{0.1cm}
-\noindent{\underline{\textit{Task Completion Time}}}: In Figure~\ref{DATAPLOT} (bottom row), a decrease in task completion times during \textit{Disambiguation} paradigm was observed in all but one case: \textit{RdG}--headarray combination. However, these differences were not statistically significant for any of the task-interface combinations. The anomalous case of an increase in task completion time for \textit{RdG}--headarray combination can be explained by the fact that a \textit{single} mode switch assistance at the beginning of the trial probably did not have measurable impact as the task required multiple mode switches to operate in the orientation space as well.
-
+\noindent{\underline{\textit{Task Completion Time}}}: 
+%In Figure~\ref{DATAPLOT} (bottom row), a decrease in task completion times during \textit{Disambiguation} paradigm was observed in all but one case: \textit{RdG}--headarray combination. However, these differences were not statistically significant for any of the task-interface combinations. The anomalous case of an increase in task completion time for \textit{RdG}--headarray combination can be explained by the fact that a \textit{single} mode switch assistance at the beginning of the trial probably did not have measurable impact as the task required multiple mode switches to operate in the orientation space as well.
+\textcolor{blue}{In Figure~\ref{DATAPLOT} (bottom row), a statistically significant decrease in task completion times between \textit{Manual} and \textit{Disambiguation} paradigms was observed when using the joystick. The task completion times were comparable between the two paradigms when using the head array. This can be possibly explained by the fact that a \textit{single} mode switch assistance at the beginning of the trial probably did not have a measurable impact in reducing the subsequent number of mode switches needed when using a head array}. 
 \vspace{0.1cm}
 \noindent{\underline{\textit{On--Demand}}}: The number of disambiguation requests for each task-interface combinations is reported in Table~\ref{ONDEMAND}. Although the subjects demonstrated a wide range of disambiguation request behaviors, we were able to observe a general trend of an increase in disambiguation requests with an increase in task difficulty. This shows that users were keen to explore the \textit{on-demand} option when the tasks became more difficult. 
 
@@ -456,29 +449,7 @@ An improvement in task performance in terms of a decrease in the number of mode 
 %\end{table}
 
 
-\begin{table}
-	\centering
- \begin{tabular}{ccccc}
-	\toprule
-	&\multicolumn{2}{c}{Joystick}
-	&
-	\multicolumn{2}{c}{Head Array} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
-	SubID &\textit{RsG}& \textit{RdG}    & \textit{RsG} &\textit{RdG}      \\
-	\bottomrule
-	H1 &1& 0   & 5 & 6  \\
-	\bottomrule
-	H2 &1& 1    & 3 & 6      \\
-	\bottomrule
-	H3 &2& 2    & 4 &5    \\
-	\bottomrule
-	H4 &2& 5    & 17 &7   \\
-	\bottomrule
-\end{tabular}
-\vspace{.2cm}
-\caption{Number of Disambiguation requests}
-%\vspace{-0.2cm}
-\label{ONDEMAND}
-\end{table}
+
 
 \subsection{Discussion}
 Currently the algorithm assumes that at any point in the workspace all the goals in the scene are equally likely. However, in the real scenario, the user usually has an idea of what goal s/he is going for. Therefore, it might be useful to bias the computation of the ``best control mode'' by looking for cues in the past history of the robot trajectory and control commands such that the control mode chosen will always be useful for the human in reaching the goal s/he has in mind. This will also likely improve the robustness and result in higher user acceptance. 
@@ -504,8 +475,30 @@ Secondly, the algorithm only tries to maximize the utility value \textit{for} th
 %	\label{US}
 %\end{table}
 \section{CONCLUSIONS}\label{DC}
-
-In this paper, we have presented an algorithm for disambiguation assistance with a shared-control robotic arm. We also introduced the notion of \textit{inverse legibility}, in which the human-generated actions are legible enough \textit{for} the robot to infer the human intent confidently and accurately. The goal of the algorithm developed in this paper is to seek legible control commands from the human by placing the control in those modes able to \textit{maximally disambiguate} between the various goals in the scene.  Moreover, preliminary pilot study results indicated that the disambiguation paradigm proposed was successful in decreasing task effort (number of mode switches) across interfaces and tasks. Our simulation work evaluated the robustness of the algorithm and the impact of different confidence functions on intent disambiguation. In our future work, informed by our pilot studies we plan to enhance our algorithm, to improve task performance and extend the framework into an automated mode switch assistance system. 
+\begin{table}[t]
+	\centering
+	\begin{tabular}{ccccc}
+		\toprule
+		&\multicolumn{2}{c}{Joystick}
+		&
+		\multicolumn{2}{c}{Head Array} \\\cmidrule(r){2-3}\cmidrule(l){4-5}
+		SubID &\textit{RsG}& \textit{RdG}    & \textit{RsG} &\textit{RdG}      \\
+		\bottomrule
+		H1 &1& 0   & 5 & 6  \\
+		\bottomrule
+		H2 &1& 1    & 3 & 6      \\
+		\bottomrule
+		H3 &2& 2    & 4 &5    \\
+		\bottomrule
+		H4 &2& 5    & 17 &7   \\
+		\bottomrule
+	\end{tabular}
+	\vspace{.2cm}
+	\caption{Number of Disambiguation requests}
+	%\vspace{-0.2cm}
+	\label{ONDEMAND}
+\end{table}
+In this paper, we have presented an algorithm for disambiguation assistance with a shared-control robotic arm. We also introduced the notion of \textit{inverse legibility}, in which the human-generated actions are legible enough \textit{for} the robot to infer the human intent confidently and accurately. The goal of the algorithm developed in this paper is to seek legible control commands from the human by placing the control in those modes able to \textit{maximally disambiguate} between the various goals in the scene.  Moreover, preliminary pilot study results indicated that the disambiguation paradigm proposed \textcolor{blue}{in this work is a promising approach} in decreasing task effort (number of mode switches) across interfaces and tasks. Our simulation work evaluated the robustness of the algorithm and the impact of different confidence functions on intent disambiguation. In our future work, informed by our pilot studies we plan to enhance our algorithm, to improve task performance and extend the framework into an automated mode switch assistance system. 
 
 \section*{Acknowledgments}
 Research reported in this publication was supported by the

@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -49,6 +49,12 @@ Young~Sang Choi, Cressel~D. Anderson, Jonathan~D. Glass, and Charles~C. Kemp.
 John~P. Donoghue.
 \newblock Connecting cortex to machines: recent advances in brain interfaces.
 \newblock \emph{Nature Neuroscience}, 5:\penalty0 1085--1088, 2002.
+
+\bibitem[Dragan and Srinivasa(2013)]{dragan2013policy}
+Anca~D. Dragan and Siddhartha~S. Srinivasa.
+\newblock A policy-blending formalism for shared control.
+\newblock \emph{The International Journal of Robotics Research}, 32\penalty0
+  (7):\penalty0 790--805, 2013.
 
 \bibitem[Dragan et~al.(2013)Dragan, Lee, and Srinivasa]{dragan2013legibility}
 Anca~D. Dragan, Kenton~CT. Lee, and Siddhartha~S. Srinivasa.

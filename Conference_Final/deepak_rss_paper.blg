@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: deepak_rss_paper.aux
 The style file: plainnat.bst
 Database file #1: references.bib
-Warning--can't use both volume and number fields in baker2007goal
 You've used 20 entries,
             2773 wiz_defined-function locations,
-            714 strings with 9313 characters,
-and the built_in function-call counts, 11962 in all, are:
-= -- 1131
+            697 strings with 8985 characters,
+and the built_in function-call counts, 9554 in all, are:
+= -- 772
 > -- 650
-< -- 16
+< -- 3
 + -- 218
 - -- 198
-* -- 954
-:= -- 1705
-add.period$ -- 72
+* -- 800
+:= -- 1470
+add.period$ -- 60
 call.type$ -- 20
 change.case$ -- 126
 chr.to.int$ -- 20
-cite$ -- 41
-duplicate$ -- 568
-empty$ -- 975
+cite$ -- 40
+duplicate$ -- 456
+empty$ -- 813
 format.name$ -- 220
-if$ -- 2634
+if$ -- 1988
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 20
 newline$ -- 108
 num.names$ -- 80
-pop$ -- 278
+pop$ -- 292
 preamble$ -- 1
 purify$ -- 106
 quote$ -- 0
-skip$ -- 448
+skip$ -- 309
 stack$ -- 0
-substring$ -- 602
-swap$ -- 147
-text.length$ -- 13
+substring$ -- 202
+swap$ -- 33
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 220
-warning$ -- 1
-while$ -- 109
+warning$ -- 0
+while$ -- 73
 width$ -- 0
-write$ -- 279
-(There was 1 warning)
+write$ -- 254

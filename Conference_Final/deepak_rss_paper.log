@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  27 MAY 2017 13:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  28 MAY 2017 09:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -801,8 +801,8 @@ LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 l.278 \end{equation*}
                       <./figures/ArbFunc.png>]
 Underfull \hbox (badness 5217) in paragraph at lines 295--295
-[][][][]\OT1/ptm/m/n/8 In our im-ple-men-ta-tion con-fi-dence func-tion \OT1/pt
-m/b/n/8 C2 \OT1/ptm/m/n/8 is com-puted as
+[][][][][]\OT1/ptm/m/n/8 In our im-ple-men-ta-tion con-fi-dence func-tion \OT1/
+ptm/b/n/8 C2 \OT1/ptm/m/n/8 is com-puted as
  []
 
 [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
@@ -899,11 +899,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 555.
 Here is how much of TeX's memory you used:
  8822 strings out of 495028
  130453 string characters out of 6181497
- 314573 words of memory out of 5000000
+ 314601 words of memory out of 5000000
  11766 multiletter control sequences out of 15000+600000
  56014 words of font info for 131 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,15n,35p,1879b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,15n,35p,1897b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -928,7 +928,7 @@ er/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/zapfding/uzdr.pfb>
-Output written on deepak_rss_paper.pdf (9 pages, 2439693 bytes).
+Output written on deepak_rss_paper.pdf (9 pages, 2439862 bytes).
 PDF statistics:
  353 PDF objects out of 1000 (max. 8388607)
  302 compressed objects within 4 object streams

@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: deepak_rss_paper.aux
 The style file: plainnat.bst
 Database file #1: references.bib
-You've used 21 entries,
+You've used 23 entries,
             2773 wiz_defined-function locations,
-            703 strings with 9187 characters,
-and the built_in function-call counts, 10010 in all, are:
-= -- 816
-> -- 671
-< -- 4
-+ -- 225
-- -- 204
-* -- 837
-:= -- 1538
-add.period$ -- 63
-call.type$ -- 21
-change.case$ -- 131
-chr.to.int$ -- 21
-cite$ -- 42
-duplicate$ -- 476
-empty$ -- 853
-format.name$ -- 229
-if$ -- 2084
-int.to.chr$ -- 1
+            710 strings with 9401 characters,
+and the built_in function-call counts, 10764 in all, are:
+= -- 876
+> -- 713
+< -- 6
++ -- 240
+- -- 216
+* -- 888
+:= -- 1653
+add.period$ -- 69
+call.type$ -- 23
+change.case$ -- 140
+chr.to.int$ -- 22
+cite$ -- 46
+duplicate$ -- 519
+empty$ -- 925
+format.name$ -- 247
+if$ -- 2245
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 21
-newline$ -- 113
-num.names$ -- 84
-pop$ -- 300
+missing$ -- 24
+newline$ -- 123
+num.names$ -- 92
+pop$ -- 327
 preamble$ -- 1
-purify$ -- 110
+purify$ -- 118
 quote$ -- 0
-skip$ -- 325
+skip$ -- 353
 stack$ -- 0
-substring$ -- 229
-swap$ -- 34
+substring$ -- 233
+swap$ -- 39
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 231
+type$ -- 248
 warning$ -- 0
-while$ -- 78
+while$ -- 84
 width$ -- 0
-write$ -- 267
+write$ -- 291

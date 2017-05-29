@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -49,6 +49,17 @@ Young~Sang Choi, Cressel~D. Anderson, Jonathan~D. Glass, and Charles~C. Kemp.
 John~P. Donoghue.
 \newblock Connecting cortex to machines: recent advances in brain interfaces.
 \newblock \emph{Nature Neuroscience}, 5:\penalty0 1085--1088, 2002.
+
+\bibitem[Dragan and Srinivasa(2012{\natexlab{a}})]{dragan2012assistive}
+Anca~D. Dragan and Siddhartha~S. Srinivasa.
+\newblock Assistive teleoperation for manipulation tasks.
+\newblock In \emph{Proceedings of ACM/IEEE International Conference on
+  Human-Robot Interaction (HRI}, 2012{\natexlab{a}}.
+
+\bibitem[Dragan and Srinivasa(2012{\natexlab{b}})]{dragan2012formalizing}
+Anca~D. Dragan and Siddhartha~S. Srinivasa.
+\newblock \emph{Formalizing assistive teleoperation}.
+\newblock MIT Press, 2012{\natexlab{b}}.
 
 \bibitem[Dragan and Srinivasa(2013)]{dragan2013policy}
 Anca~D. Dragan and Siddhartha~S. Srinivasa.

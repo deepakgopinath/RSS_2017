@@ -1,5 +1,5 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{RELATED WORKS}{}% 2
+\BOOKMARK [1][-]{section.2}{RELATED WORK}{}% 2
 \BOOKMARK [1][-]{section.3}{ALGORITHM DESIGN}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{Notation}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Disambiguation Metric}{section.3}% 5
@@ -10,7 +10,7 @@
 \BOOKMARK [1][-]{section.4}{IMPLEMENTATION}{}% 10
 \BOOKMARK [2][-]{subsection.4.1}{Confidence Function}{section.4}% 11
 \BOOKMARK [2][-]{subsection.4.2}{Control Sharing Paradigm}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{SIMULATION STUDY}{}% 13
+\BOOKMARK [1][-]{section.5}{SIMULATION ANALYSIS}{}% 13
 \BOOKMARK [2][-]{subsection.5.1}{Choice of Confidence Functions}{section.5}% 14
 \BOOKMARK [2][-]{subsection.5.2}{Characterization of Simplifying Assumption}{section.5}% 15
 \BOOKMARK [2][-]{subsection.5.3}{Discussion}{section.5}% 16

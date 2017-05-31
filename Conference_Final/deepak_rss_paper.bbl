@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -143,8 +143,15 @@ Alexander Sorokin, Dmitry Berenson, Siddhartha~S. Srinivasa, and Martial
   Hebert.
 \newblock People helping robots helping people: Crowdsourcing for grasping
   novel objects.
-\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
-  Systems (IROS)}, 2010.
+\newblock In \emph{Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems (IROS)}, 2010.
+
+\bibitem[Tavakkoli et~al.(2007)Tavakkoli, Kelley, King, Nicolescu, Nicolescu,
+  and Bebis]{tavakkoli2007vision}
+Alireza Tavakkoli, Richard Kelley, Christopher King, Mircea Nicolescu, Monica
+  Nicolescu, and George Bebis.
+\newblock A vision-based architecture for intent recognition.
+\newblock \emph{Advances in Visual Computing}, pages 173--182, 2007.
 
 \bibitem[Tsui et~al.(2008)Tsui, Yanco, Kontak, and
   Beliveau]{tsui2008development}
@@ -161,5 +168,14 @@ Ivan Volosyak, Oleg Ivlev, and Axel Graser.
   implementation.
 \newblock In \emph{Proceedings of the International Conference on
   Rehabilitation Robotics (ICORR)}, 2005.
+
+\bibitem[Wasson et~al.(2003)Wasson, Sheth, Alwan, Granata, Ledoux, and
+  Huang]{wasson2003user}
+Glenn Wasson, Pradip Sheth, Majd Alwan, Kevin Granata, Alexandre Ledoux, and
+  Cunjun Huang.
+\newblock User intent in a shared control framework for pedestrian mobility
+  aids.
+\newblock In \emph{Proceedings of the IEEE/RSJ International Conference on
+  Intelligent Robots and Systems (IROS)}, 2003.
 
 \end{thebibliography}

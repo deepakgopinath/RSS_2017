@@ -27,11 +27,11 @@ for kk=1:length(interfaces)
 %     bh1 = boxplot([v1,v2], 'whisker', 50);
     
     
-    bh1 = boxplot(v1, 'positions', y1,'whisker', 50);set(bh1(:,1),'linewidth',2);
-    bh2 = boxplot(v2, 'positions', y2,'whisker', 50);set(bh2(:,1),'linewidth',2);
+    bh1 = boxplot(v1, 'positions', y1,'whisker', 50,'Widths', 0.3);set(bh1(:,1),'linewidth',2);
+    bh2 = boxplot(v2, 'positions', y2,'whisker', 50,'Widths', 0.3);set(bh2(:,1),'linewidth',2);
     else
-    bh3 = boxplot(v1, 'positions', y1,'whisker', 50);set(bh3(:,1),'linewidth',2);
-    bh4 = boxplot(v2, 'positions', y2,'whisker', 50);set(bh4(:,1),'linewidth',2);
+    bh3 = boxplot(v1, 'positions', y1,'whisker', 50,'Widths', 0.3);set(bh3(:,1),'linewidth',2);
+    bh4 = boxplot(v2, 'positions', y2,'whisker', 50,'Widths', 0.3);set(bh4(:,1),'linewidth',2);
     end
     
 %     

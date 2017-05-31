@@ -196,7 +196,7 @@ This difference is denoted by $\Omega$ and is computed as
 \end{equation*}
 where $\hat{\mathcal{C}}$ is the set of projections of all goals confidences along \textcolor{blue}{a} control dimension.
 \subsubsection{Separation in confidences}
-\textcolor{blue}{If the difference between the largest confidences fail to disambiguate, then disambiguation will benefit from looking at the \textit{separation}, $\Lambda$, in the remaining goal confidences of a control dimension.} At any point in space this can be computed as the \textit{sum of pairwise distances} between the $n_g$ confidences.  Thus,
+\textcolor{blue}{If the difference between the largest confidences fails to disambiguate, then the \textit{separation}, $\Lambda$, in the remaining goal confidences of a control dimension will greatly aid the disambiguation.} At any point in space this can be computed as the \textit{sum of pairwise distances} between the $n_g$ confidences.  Thus,
 \begin{equation*}
 \Lambda = \sum_{p=1}^{n_g}\sum_{q=p}^{n_g}\lvert c^{p}_{\delta_x} - c^{q}_{\delta_x}\rvert
 \end{equation*}
@@ -394,7 +394,7 @@ An improvement in task performance in terms of a decrease in the number of mode 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width = 1.15\hsize ,center]{./figures/FINAL_BOXPLOT.png}
+	\includegraphics[width = 1.11\hsize ,center]{./figures/FINAL_BOXPLOT_3.png}
 	\vspace{-0.7cm}
 	\caption{Comparison of Disambiguation and Manual paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). \textcolor{blue}{Box plots show the median and the quartiles}.}
 	\label{DATAPLOT}

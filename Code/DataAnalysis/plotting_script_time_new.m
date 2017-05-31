@@ -22,13 +22,13 @@ for kk=1:length(interfaces)
 %         bh3 = boxplot([v1,v2], 'whisker', 200);
 %         set(bh3(:,2),'linewidth',2);
         
-        bh5 = boxplot(v1, 'positions', y1, 'whisker', 200);set(bh5(:,1),'linewidth',2);
-        bh6 = boxplot(v2, 'positions', y2,'whisker', 200);set(bh6(:,1),'linewidth',2);
+        bh5 = boxplot(v1, 'positions', y1, 'whisker', 200,'Widths', 0.3);set(bh5(:,1),'linewidth',2);
+        bh6 = boxplot(v2, 'positions', y2,'whisker', 200,'Widths', 0.3);set(bh6(:,1),'linewidth',2);
     else
         v1(v1 == 0) = [];
         v1 = [v1;median(v1)];
-        bh7 = boxplot(v1, 'positions', y1,'whisker', 200);set(bh7(:,1),'linewidth',2);
-        bh8 = boxplot(v2, 'positions', y2,'whisker', 200);set(bh8(:,1),'linewidth',2);
+        bh7 = boxplot(v1, 'positions', y1,'whisker', 200,'Widths', 0.3);set(bh7(:,1),'linewidth',2);
+        bh8 = boxplot(v2, 'positions', y2,'whisker', 200,'Widths', 0.3);set(bh8(:,1),'linewidth',2);
     end
 %     
 %     scatter(y1*ones(length(v1),1), v1, 'o', 'k', 'LineWidth', 1.5);

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  30 MAY 2017 21:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  30 MAY 2017 23:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,22 +517,22 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 (./deepak_rss_paper.aux)
 \openout1 = `deepak_rss_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 33.
+Package hyperref Info: Link coloring OFF on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -542,9 +542,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count139
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
 
 (./deepak_rss_paper.out) (./deepak_rss_paper.out)
 \@outlinefile=\write3
@@ -579,107 +579,104 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-** ATTENTION: \authorblockN is deprecated (line 83). Use \IEEEauthorblockN inst
+** ATTENTION: \authorblockN is deprecated (line 84). Use \IEEEauthorblockN inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 83.
-LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 84.
+LaTeX Font Info:    Try loading font information for U+msa on input line 84.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 83.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 84.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 84.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorblockN is deprecated (line 83). Use \IEEEauthorblockN inst
+** ATTENTION: \authorblockN is deprecated (line 84). Use \IEEEauthorblockN inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorrefmark is deprecated (line 83). Use \IEEEauthorrefmark in
+** ATTENTION: \authorrefmark is deprecated (line 84). Use \IEEEauthorrefmark in
 stead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
-** ATTENTION: \authorblockA is deprecated (line 83). Use \IEEEauthorblockA inst
+** ATTENTION: \authorblockA is deprecated (line 84). Use \IEEEauthorblockA inst
 ead.
 
-Underfull \hbox (badness 2512) in paragraph at lines 96--97
+Underfull \hbox (badness 2512) in paragraph at lines 97--98
 []\OT1/ptm/m/n/10 Assistive and re-ha-bil-i-ta-tion de-vices such as pow-ered
  []
 
-<./figures/DE_NEW3.png, id=99, 423.5825pt x 236.885pt>
-File: ./figures/DE_NEW3.png Graphic file (type png)
+<./figures/DE_PDF.pdf, id=99, 318.18875pt x 177.66376pt>
+File: ./figures/DE_PDF.pdf Graphic file (type pdf)
 
-<use ./figures/DE_NEW3.png>
-Package pdftex.def Info: ./figures/DE_NEW3.png used on input line 108.
-(pdftex.def)             Requested size: 147.06189pt x 82.2423pt.
-
-Underfull \vbox (badness 2617) has occurred while \output is active []
-
+<use ./figures/DE_PDF.pdf>
+Package pdftex.def Info: ./figures/DE_PDF.pdf used on input line 109.
+(pdftex.def)             Requested size: 147.06189pt x 82.11127pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -688,80 +685,86 @@ s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.127 
-       <./figures/DE_NEW3.png (PNG copy)>]
-<./figures/DisambMetric_New2.png, id=147, 643.40375pt x 444.66125pt>
-File: ./figures/DisambMetric_New2.png Graphic file (type png)
+l.128 
+       <./figures/DE_PDF.pdf>]
+<./figures/DisambMetric.pdf, id=158, 482.80376pt x 333.245pt>
+File: ./figures/DisambMetric.pdf Graphic file (type pdf)
 
-<use ./figures/DisambMetric_New2.png>
-Package pdftex.def Info: ./figures/DisambMetric_New2.png used on input line 152
-.
-(pdftex.def)             Requested size: 251.99657pt x 174.71312pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
-[][]
- []
-
+<use ./figures/DisambMetric.pdf>
+Package pdftex.def Info: ./figures/DisambMetric.pdf used on input line 153.
+(pdftex.def)             Requested size: 252.00237pt x 174.71724pt.
 
 Underfull \vbox (badness 3701) has occurred while \output is active []
 
  [2]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 179.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 180.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 179.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 180.
 
 [3pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.196 \end{equation*}
-                      <./figures/DisambMetric_New2.png (PNG copy)>]
-<./figures/ArbFunc_New1.png, id=202, 677.53125pt x 530.98375pt>
+l.197 \end{equation*}
+                      <./figures/DisambMetric.pdf>]
+<./figures/ArbFunc_New1.png, id=238, 677.53125pt x 530.98375pt>
 File: ./figures/ArbFunc_New1.png Graphic file (type png)
 
 <use ./figures/ArbFunc_New1.png>
-Package pdftex.def Info: ./figures/ArbFunc_New1.png used on input line 255.
+Package pdftex.def Info: ./figures/ArbFunc_New1.png used on input line 256.
 (pdftex.def)             Requested size: 103.19843pt x 80.87564pt.
 
-<./figures/POINT_CLOUD.png, id=204, 1736.4875pt x 848.16875pt>
+<./figures/POINT_CLOUD.png, id=240, 1736.4875pt x 848.16875pt>
 File: ./figures/POINT_CLOUD.png Graphic file (type png)
 
 <use ./figures/POINT_CLOUD.png>
-Package pdftex.def Info: ./figures/POINT_CLOUD.png used on input line 263.
+Package pdftex.def Info: ./figures/POINT_CLOUD.png used on input line 264.
 (pdftex.def)             Requested size: 515.9954pt x 235.19489pt.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.279 T
+l.280 T
        he robot control command $\boldsymbol{u}_{r,g}$ is generated using a ...
  <./figures/ArbFunc_New1.png>] [5pdfTeX warning (ext4): destination with the sa
 me identifier (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.321 
+l.322 
        <./figures/POINT_CLOUD.png>]
-<./figures/INTER_3.png, id=235, 1143.27126pt x 417.56pt>
-File: ./figures/INTER_3.png Graphic file (type png)
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 352.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 352.
+Package epstopdf Info: Source file: <./figures/INTER_4.eps>
+(epstopdf)                    date: 2017-05-30 22:22:25
+(epstopdf)                    size: 310438 bytes
+(epstopdf)             Output file: <./figures/INTER_4-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-05-30 22:22:42
+(epstopdf)                    size: 83448 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/INTER_4-eps-conv
+erted-to.pdf ./figures/INTER_4.eps>
+(epstopdf)             \includegraphics on input line 355.
+Package epstopdf Info: Output file is already uptodate.
 
-<use ./figures/INTER_3.png>
-Package pdftex.def Info: ./figures/INTER_3.png used on input line 352.
-(pdftex.def)             Requested size: 251.99146pt x 94.07437pt.
+<./figures/INTER_4-eps-converted-to.pdf, id=273, 1144.275pt x 418.56375pt>
+File: ./figures/INTER_4-eps-converted-to.pdf Graphic file (type pdf)
 
-<./figures/TASKS.png, id=236, 1565.85pt x 391.4625pt>
+<use ./figures/INTER_4-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/INTER_4-eps-converted-to.pdf used on input l
+ine 355.
+(pdftex.def)             Requested size: 251.98572pt x 94.07697pt.
+
+<./figures/TASKS.png, id=274, 1565.85pt x 391.4625pt>
 File: ./figures/TASKS.png Graphic file (type png)
 
 <use ./figures/TASKS.png>
-Package pdftex.def Info: ./figures/TASKS.png used on input line 359.
+Package pdftex.def Info: ./figures/TASKS.png used on input line 362.
 (pdftex.def)             Requested size: 516.0pt x 128.99785pt.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 365.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 365.
  [6pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
 has been already used, duplicate ignored
 
@@ -780,19 +783,38 @@ l.374
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.374 
-       <./figures/INTER_3.png>]
-<./figures/FINAL_BOXPLOT_3.png, id=253, 491.436pt x 444.27031pt>
-File: ./figures/FINAL_BOXPLOT_3.png Graphic file (type png)
+       <./figures/INTER_4-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figures/FINAL_BOX_PLOT_7.eps>
+(epstopdf)                    date: 2017-05-30 23:55:27
+(epstopdf)                    size: 39008 bytes
+(epstopdf)             Output file: <./figures/FINAL_BOX_PLOT_7-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-05-30 23:36:04
+(epstopdf)                    size: 10027 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/FINAL_BOX_PLOT_7
+-eps-converted-to.pdf ./figures/FINAL_BOX_PLOT_7.eps>
+(epstopdf)             \includegraphics on input line 397.
+runsystem(repstopdf --outfile=./figures/FINAL_BOX_PLOT_7-eps-converted-to.pdf .
+/figures/FINAL_BOX_PLOT_7.eps)...executed safely (allowed).
 
-<use ./figures/FINAL_BOXPLOT_3.png>
-Package pdftex.def Info: ./figures/FINAL_BOXPLOT_3.png used on input line 397.
-(pdftex.def)             Requested size: 279.72015pt x 252.88419pt.
+Package epstopdf Info: Result file: <./figures/FINAL_BOX_PLOT_7-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-05-30 23:55:39
+(epstopdf)                    size: 10019 bytes.
+
+<./figures/FINAL_BOX_PLOT_7-eps-converted-to.pdf, id=291, 532.99126pt x 479.792
+5pt>
+File: ./figures/FINAL_BOX_PLOT_7-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./figures/FINAL_BOX_PLOT_7-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/FINAL_BOX_PLOT_7-eps-converted-to.pdf used o
+n input line 397.
+(pdftex.def)             Requested size: 282.23877pt x 254.07649pt.
  [7pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.415 
+l.416 
        <./figures/TASKS.png>] (./deepak_rss_paper.bbl [8pdfTeX warning (ext4): 
 destination with the same identifier (name{figure.7}) has been already used, du
 plicate ignored
@@ -806,8 +828,8 @@ same identifier (name{table.3}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.34   Blythe]{barrett2005accurate}
-                                    <./figures/FINAL_BOXPLOT_3.png (PNG copy)>]
-
+                                    <./figures/FINAL_BOX_PLOT_7-eps-converted-t
+o.pdf>]
 Underfull \hbox (badness 2443) in paragraph at lines 174--180
 []\OT1/ptm/m/n/10 Glenn Was-son, Pradip Sheth, Majd Al-wan, Kevin
  []
@@ -824,19 +846,19 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 559.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 559.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
  (./deepak_rss_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 559.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 559.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 560.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 560.
 Package rerunfilecheck Info: File `deepak_rss_paper.out' has not changed.
 (rerunfilecheck)             Checksum: 0BE8237F73015932A357747DB68DBB46;1511.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 559.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 560.
  ) 
 Here is how much of TeX's memory you used:
- 8842 strings out of 495028
- 130981 string characters out of 6181497
+ 8843 strings out of 495028
+ 131096 string characters out of 6181497
  314900 words of memory out of 5000000
  11782 multiletter control sequences out of 15000+600000
  55654 words of font info for 130 fonts, out of 8000000 for 9000
@@ -865,10 +887,10 @@ er/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on deepak_rss_paper.pdf (9 pages, 2413264 bytes).
+Output written on deepak_rss_paper.pdf (9 pages, 2361220 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
+ 419 PDF objects out of 1000 (max. 8388607)
+ 359 compressed objects within 4 object streams
  75 named destinations out of 1000 (max. 500000)
  220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

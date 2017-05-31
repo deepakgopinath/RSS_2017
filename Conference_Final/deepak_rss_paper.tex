@@ -7,6 +7,7 @@
 \usepackage[bookmarks=true]{hyperref}
 \usepackage{graphics} % for pdf, bitmapped graphics files
 \usepackage{graphicx}
+
 \usepackage{amsmath,amssymb,latexsym,float,epsfig,subfigure}
 \usepackage{amsmath} % assumes amsmath package installed
 \usepackage{amssymb}  % assumes amsmath package installed
@@ -83,7 +84,7 @@ Brenna D. Argall\authorrefmark{1}\authorrefmark{2}\authorrefmark{3}\authorrefmar
 
 \begin{abstract}
 
-In this paper, we develop an algorithm for intent inference via goal disambiguation with a shared-control assistive robotic arm. Assistive systems are often required to infer human intent and this \textcolor{blue}{often is} a bottleneck for providing assistance quickly and accurately. We introduce the notion of \textit{inverse legibility} in which the human-generated actions are legible enough for the \textit{robot} to infer the human intent confidently and accurately. The proposed disambiguation paradigm seeks to elicit legible control commands from the human by selecting control modes \textcolor{blue}{for the robotic arm in which human-directed motion will} \textit{maximally disambiguate} between \textcolor{blue}{multiple} goals. We present simulation results which look into the robustness of our algorithm and the impact of the choice of confidence functions on the performance of the system. 
+In this paper, we develop an algorithm for intent inference via goal disambiguation with a shared-control assistive robotic arm. Assistive systems are often required to infer human intent and this often is a bottleneck for providing assistance quickly and accurately. We introduce the notion of \textit{inverse legibility} in which the human-generated actions are legible enough for the \textit{robot} to infer the human intent confidently and accurately. The proposed disambiguation paradigm seeks to elicit legible control commands from the human by selecting control modes \textcolor{blue}{for the robotic arm in which human-directed motion will} \textit{maximally disambiguate} between \textcolor{blue}{multiple} goals. We present simulation results which look into the robustness of our algorithm and the impact of the choice of confidence functions on the performance of the system. 
 %Our simulation results suggest that the disambiguating control mode computed by our algorithm produces more intuitive results when the confidence function is able to capture the ``directedness'' towards a goal. 
 Our simulations results suggest that the choice of confidence function is a critical factor in determining the disambiguation algorithm's capability to capture human intent. We also present a pilot study that explores the efficacy of the algorithm on real hardware with promising preliminary results.
 % indicate that the assistance paradigm proposed \textcolor{blue}{is a promising approach} in decreasing task effort (number of mode switches) across interfaces and tasks. 
@@ -105,7 +106,7 @@ It has been established that mode switching is expensive and as a result task pe
 \begin{figure}[b]
 	\begin{center}
 %		\vspace{-0.8cm}
-		\includegraphics[width=0.285\textwidth]{./figures/DE_NEW3.png}
+		\includegraphics[width=0.285\textwidth]{./figures/DE_PDF.pdf}
 	\end{center}
 %	\vspace{-.45cm}
 	\caption{Illustration of goal disambiguation along various control dimensions. Any motion of the end effector (green) along the y-axis will not help the system to disambiguate the two goals (A and B). However, motion along the x-axis provides cues as to which goal.}
@@ -149,7 +150,7 @@ Also related to our work is the idea of mutual cooperation between humans and ro
 
 \begin{figure}
 %	\centering
-	\includegraphics[width = 1\hsize, height = 0.26\vsize]{./figures/DisambMetric_New2.png}
+	\includegraphics[width = 1\hsize, height = 0.26\vsize]{./figures/DisambMetric.pdf}
 	\vspace{-0.4cm}
 	\caption{Illustration of change in confidence with movement along a single control dimension. A very different distribution of confidences results from positive motion (beige) versus negative motion (blue). Snapshots after moving by amount $\Delta x$ highlighted by rectangles.}
 	\label{DM_FIG}
@@ -346,23 +347,22 @@ Our simulation results indicate a strong correlation between the intent inferenc
  We next explore the use and utility of our disambiguation approach in a pilot study. Four subjects participated in the pilot study (3 male, 1 female), and all were lab members.
  \subsection{Hardware}\label{HARDWARE}
  
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width = 1\hsize, height = 0.14\vsize]{./figures/INTER_3.png}
-	\vspace{-0.3cm}
-	\caption{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega$ indicate the translational and rotational velocities of the end-effector, respectively.}
-	\label{J2_HA}
-\end{figure}
-\begin{figure*}[ht]
-	\centering
-	\includegraphics[width = 1\hsize]{./figures/TASKS.png}
-	\caption{Pilot study tasks. \textit{Left to right:} Training, Testing (Easy), Testing (Hard).}
-	\label{TASKS}
-\end{figure*}
  The experiments were performed using the MICO robotic arm (Kinova Robotics, Canada), which is a 6-DoF robotic arm specifically designed for assistive purposes. The software system was implemented using the Robot Operating System (ROS) and data analysis was performed using MATLAB.\footnote{Additionally, for the 6-D robot arm implementation, the computation of \textbf{C2} is split into translational and rotational components. (In Section~\ref{SIMRESULTS}, only translational components were considered.) Here confidence function \textbf{C2} is computed as
  	$c(\boldsymbol{x}, \boldsymbol{u}_h, \boldsymbol{u}_{r,g}) = \boldsymbol{u}_{h}^{trans}\cdot(\boldsymbol{x}_{g} - \boldsymbol{x})^{trans} + \boldsymbol{u}_h^{rot}\cdot\boldsymbol{u}_{r,g}^{(rot)}$
  	where $trans$ refers to the translational and $rot$ the rotational parts of the full control space.}
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[width = 1\hsize, height = 0.14\vsize]{./figures/INTER_4.eps}
+ 	\vspace{-0.35cm}
+ 	\caption{A 2-axis joystick (left) and switch-based head array (center) and their operational paradigms (right). $v$ and $\omega$ indicate the translational and rotational velocities of the end-effector, respectively.}
+ 	\label{J2_HA}
+ \end{figure}
+ \begin{figure*}[ht]
+ 	\centering
+ 	\includegraphics[width = 1\hsize]{./figures/TASKS.png}
+ 	\caption{Pilot study tasks. \textit{Left to right:} Training, Testing (Easy), Testing (Hard).}
+ 	\label{TASKS}
+ \end{figure*}
  
  \textcolor{blue}{The human control command $\boldsymbol{u}_h$ was captured using two different control interfaces: 2-axis joystick and a 1-D head array, shown in Figure~\ref{J2_HA}. For both interfaces, the control interface signals were mapped to Cartesian velocities of the end-effector of the robot. Additionally, the interfaces were used to request mode switch assistance.}
  
@@ -394,11 +394,12 @@ An improvement in task performance in terms of a decrease in the number of mode 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width = 1.11\hsize ,center]{./figures/FINAL_BOXPLOT_3.png}
+	\includegraphics[width = 1.12\hsize ,center]{./figures/FINAL_BOX_PLOT_7.eps}
 	\vspace{-0.7cm}
 	\caption{Comparison of Disambiguation and Manual paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). \textcolor{blue}{Box plots show the median and the quartiles}.}
 	\label{DATAPLOT}
 \end{figure}
+
 \vspace{0.1cm}
 \noindent{\underline{\textit{Mode Switches}}}: Figure~\ref{DATAPLOT} (top row) reveals a general trend of a decrease in the number of mode switches when disambiguation assistance was employed. This indicates that upon starting in a mode identified by the algorithm, the number of subsequent mode switches performed by the user was reduced.
  

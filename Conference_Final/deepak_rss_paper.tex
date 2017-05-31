@@ -176,10 +176,10 @@ The disambiguation metric $D_{k}$ encodes different aspects of how the goal conf
 
 A proper design of $D_{k}$ should take into account both immediate as well as long term benefits of moving in $k$. In order to compute the goal confidences after a small user-initiated robot motion we sample the confidence function in the neighborhood $x\pm\Delta x$ of the current pose $x$ of the robot, where $\Delta x$ is a small change along the control dimension. 
 	
-An additional consideration is that a confidence function might depend on the user control command ($\boldsymbol{u}_h$). For such functions, during the sampling procedure the value of $\boldsymbol{u}_h$ is set as $\frac{\Delta x}{\Delta t}$---that is, the velocity that would result in movement from $x$ to $x + \Delta x$ in one execution timestep $\Delta t$. 
+An additional consideration is that a confidence function might depend on the user control command ($\boldsymbol{u}_h$). For such functions, during the sampling procedure the value of $\boldsymbol{u}_h$ is set as $\frac{\Delta x}{\Delta t}$: that is, the velocity that would result in movement from $x$ to $x + \Delta x$ in one execution timestep $\Delta t$. 
 
-We identify four important components to inform the design of $D_{k}$.
-Each of the following computations is done in reference to the projection of this motion along control dimension $k$.
+We identify four important components to inform the design of $D_{k}$ and $D_m$.
+Each of the following computations operates on a projection of the sampled motion along control dimension $k$.
 
 
  
@@ -197,7 +197,7 @@ This difference is denoted by $\Omega_k$ and is computed as
 \end{equation*}
 where $\mathcal{C}_k$ is the set of projections of all goals confidences along a control dimension $k$.
 \subsubsection{Separation in confidences}
-If the difference between the largest confidences fails to disambiguate, then the \textit{separation}, $\Lambda_k$, in the remaining goal confidences of a control dimension will further aid the disambiguation. At any point in space this can be computed as the \textit{sum of pairwise distances} between the $n_g$ confidences.  Thus,
+If the difference between the largest confidences fails to disambiguate, then the \textit{separation}, $\Lambda_k$, in the remaining goal confidences of a control dimension will further aid the disambiguation. At any point in space $\Lambda_k$ can be computed as the \textit{sum of pairwise distances} between the $n_g$ confidences.  Thus,
 \begin{equation*}
 \Lambda_k = \sum_{p=1}^{n_g}\sum_{q=p}^{n_g}\lvert c^{p}_{\delta_x} - c^{q}_{\delta_x}\rvert
 \end{equation*}
@@ -217,19 +217,19 @@ $\Gamma_k$, $\Omega_k$, $\Lambda_k$ and $\Upsilon_k$ are then combined to comput
 \begin{equation}\label{DK}
 D_{k} = \underbrace{w\cdot(\Gamma_k\cdot \Omega_k\cdot\Lambda_k)}_{\text{short-term}} + \underbrace{(1 - w)\cdot \Upsilon_k}_{\text{long-term}}
 \end{equation}
-where $w$ controls the relative contribution of short-term and the long-term benefit and is task-specific. (In our implementation, $w=0.5$.) Equation~\ref{DK} actually is computed twice, once in each of the positive ($\delta_x = x + \Delta x$) and negative directions ($\delta_x = x - \Delta x$), and the results are then summed. The computation of $D_k$ (Equation~\ref{DK}) is performed for each $k \in \mathcal{K}$. Then, the disambiguation metric $D_m$ for control mode $m$ is calculated as 
+where $w$ balances the contributions of the short-term and long-term components. (In our implementation, $w=0.5$.) Equation~\ref{DK} actually is computed twice, once in each of the positive ($\delta_x = x + \Delta x$) and negative directions ($\delta_x = x - \Delta x$), and the results are then summed. The computation of $D_k$ is performed for each $k \in \mathcal{K}$. The disambiguation metric $D_m$ for control mode $m$ is calculated as 
 \begin{equation}\label{EQ2}
-D_m = \sum_{k} D_{k} \;~ \forall \;~ k \in m.
+D_m = \sum_{k} D_{k} \;
 \end{equation}
+where $k \in m$ iterates through the set of control dimensions on which $m$ is able to operate.
 Lastly, the control mode with highest disambiguation capability $m^*$ is given by
 \begin{equation*}
 m^* = \argmax_m  D_{m}
 \end{equation*}
 and the control dimension with highest disambiguation capability $k^{*}$ is given by
 \begin{equation*}
-k^* = \argmax_k D_k.
+k^* = \argmax_k D_k~~~.
 \end{equation*}
-.
 Disambiguation mode $m^{*}$ is the mode that the algorithm chooses \textit{for} the human to better estimate their intent. Any control command issued by the user in $m^*$ is likely to be more legible due to maximal goal confidence disambiguation.
 
 \section{IMPLEMENTATION}\label{IMPL}
@@ -294,13 +294,13 @@ Additionally, $P_g$ operates in the full six dimensional Cartesian space and tre
 \section{SIMULATION ANALYSIS} \label{SIMRESULTS}
 In this section we qualitatively look at whether our disambiguation algorithm selects modes that are useful for intent disambiguation for a given goal configuration. We also evaluate the impact of certain simplification assumptions in our algorithm and of the choice of confidence functions within a simulated environment.
 
-\subsection{Choice of Confidence Functions}
-In order to qualitatively assess the correctness of our algorithm, we perform simulations in which $k^*$ is computed at $2000$ uniformly sampled points in the workspace of a robotic arm (a simulated version of the robotic arm described in Section~\ref{HARDWARE}), approximated as a $1.2\times0.6\times0.7 m^3$ volume in front of the robot. Confidence functions \textbf{C1} ($r=0.3m$) and \textbf{C2} are evaluated using a goal configuration shown in Figure~\ref{TASKS} (middle column). Since the target orientations are the same for all goals, disambiguation only happened in the translational dimensions and therefore is reduced to a 3-D problem.
+\subsection{Choice of Confidence Function}
+In order to qualitatively assess the soundness of our algorithm, we perform simulations in which $k^*$ is computed at $2000$ uniformly sampled points in the workspace of a robotic arm (a simulated version of the robotic arm described in Section~\ref{HARDWARE}), approximated as a $1.2\times0.6\times0.7 m^3$ volume in front of the robot. Confidence functions \textbf{C1} ($r=0.3m$) and \textbf{C2} are evaluated using a goal configuration shown in Figure~\ref{TASKS} (middle column). Since the target orientations are the same for all goals, disambiguation only happens in the translational dimensions and therefore is reduced to a 3-D problem.
 
 Figure~\ref{HM_SEP} shows the results of the simulation. For the goal
 distribution used in the simulation, the goal positions are
-spread out maximally along the $x$ and $z$ axes. Intuitively the
-system will be able to more quickly infer the human’s intent if the
+spread out maximally along the $x$ and $z$ axes. Intuitively, the
+system will be able to more quickly infer the human's intent if the
 human control command is either along the $x$ or the $z$ axes. Table~\ref{HMD} further
 reports the number of times the algorithm picked each of the
 three control dimensions, for each confidence function.
@@ -308,15 +308,15 @@ three control dimensions, for each confidence function.
 These results shed light on the efficacy of a confidence
 function in properly capturing human intent. The choice of confidence
 functions can greatly affect the
-computation of $k^*$ and $m^∗$, and so the power of our disambiguating
+computation of $k^*$ and $m^*$, and so the power of our disambiguating
 algorithm is intimately linked to the inference power of different
 choices of confidence function.
 
 Under confidence function \textbf{C1} the information is
-equally spread throughout all control dimensions (Table~\ref{HMD})—
+equally spread throughout all control dimensions (Table~\ref{HMD}),
 because \textbf{C1} contains less information content with respect to
-the user’s selected motion and therefore also their intended
-goal. Furthermore, \textbf{C1} had ``null'' spaces where all confidences
+the user's selected motion and therefore also their intended
+goal. Furthermore, \textbf{C1} has ``null'' spaces where all confidences
 are identically equal to zero---and therefore neither disambiguation nor intent inference are possible.
 
 \begin{table}[t]
@@ -422,9 +422,9 @@ An improvement in task performance in terms of a decrease in the number of mode 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width = 1.12\hsize ,center]{./figures/FINAL_BOX_PLOT_8.eps}
+	\includegraphics[width = 1.13\hsize ,center]{./figures/FINAL_BOX_PLOT_8.eps}
 	\vspace{-0.7cm}
-	\caption{Comparison of Disambiguation and Manual paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). Box plots show the median and the quartiles.}
+	\caption{Comparison of Manual and Disambiguation paradigms. Operation using joystick (left column) and head array (right column) interfaces. Evaluation of mode switches (top row) and completion time (bottom row). Box plots show the median and the quartiles.}
 	\label{DATAPLOT}
 \end{figure}
 
